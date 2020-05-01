@@ -87,7 +87,7 @@ export const Home = () => {
                         <Col sm={8}>
                         <Tab.Content>
                             <Tab.Pane eventKey="elem1">
-                            Description 1
+                            Description 1.
                             </Tab.Pane>
                             <Tab.Pane eventKey="elem2">
                             Description 2
