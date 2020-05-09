@@ -74,7 +74,7 @@ export const Home = () => {
                             <Nav.Link eventKey="elem5">Fire Safety Plans (Development, Review, Revisions)</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                            <Nav.Link eventKey="elem6">Building Inspection</Nav.Link>
+                            <Nav.Link eventKey="elem6">Property Condition Assessment</Nav.Link>
                             </Nav.Item>
                             
                             
@@ -137,7 +137,7 @@ export const Home = () => {
                             <Tab.Pane eventKey="elem5">
                             The Ontario Fire Code requires that residential, insitutional and industrial buildings to have
                             an approved Fire Safety plan. The Fire Safety plan should be reviewed and revised 
-                            anually. We develop Fire Safety plans customized to each building, review or revise
+                            annually. We develop Fire Safety plans customized to each building, review or revise
                             existing plans to meet current standards. Our services include presenting developed Fire Safety plans
                             to the relevant municipality and obtaining approval on your behalf. 
                             <div style = {{textAlign: "center"}}>
@@ -145,7 +145,15 @@ export const Home = () => {
                             </div>
                             </Tab.Pane>
                             <Tab.Pane eventKey="elem6">
-                            Description 6
+                            We have many years of experience in evaluating buildings - residential, commercial, and institutional - based on a thorough inspection
+                            following ASTM E2018 Standard Guide for various types of needs. Are you planning to invest in a new property? We can provide you with a 
+                            <b> pre-purchase report</b> to make an informed decision. If you are planning to refinancing your property, we can provide you with a 
+                            <b> refinancing report</b> that your bank will likely ask for. You may need to know the condition of building prior to leasing or the end
+                            of a lease term. Our <b>pre-lease</b> and <b>end-of-lease</b> assessments can help you to enjoy a hassle-free experience. If you are 
+                            planning new construction, keep in mind construction activities can have adverse effects on neighbouring buildings. In this type of scenario,
+                            we can help with <b>pre-construction</b> and <b>post-construction</b> surveys on neighbouring buildings to protect you from damage claims.
+                            <b> Capital planning</b> is another area where we can offer you our services. Our reports can help you in timing expenditures, giving you 
+                            financial breathing room and reducing overall costs.
                             </Tab.Pane>
                             <Tab.Pane eventKey = "default">
                                 Default
