@@ -1,7 +1,7 @@
 import React from 'react'
 import {Nav, Navbar} from 'react-bootstrap'
 import styled from 'styled-components'
-const logo = require("../assets/DPE.png")
+const logo = require("../assets/blueLogo.png")
 const Styles = styled.div`
     .navbar {
         background-color: #fafafa
