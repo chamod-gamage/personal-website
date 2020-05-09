@@ -47,74 +47,81 @@ export const Home = () => {
                 <Card>
                 <Card.Header as="h5"><a name = "services">Services</a></Card.Header>
                 <Card.Body>
-                <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+                <Tab.Container id="left-tabs-example" defaultActiveKey="elem1">
                     <Row>
                         <Col sm={4}>
                         <Nav variant="pills" className="flex-column">
                             <Nav.Item>
-                            <Nav.Link eventKey="elem1">Energy Efficient Heating Plant Retrofit Design</Nav.Link>
+                            <Nav.Link eventKey="elem1">System Design</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                            <Nav.Link eventKey="elem2">Hot Water Heating System Design</Nav.Link>
+                            <Nav.Link eventKey="elem2">Existing System Condition Survey</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                            <Nav.Link eventKey="elem3">Plumbing System Design</Nav.Link>
+                            <Nav.Link eventKey="elem3">Performance Measurement</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                            <Nav.Link eventKey="elem4">Backflow Prevention System Design</Nav.Link>
+                            <Nav.Link eventKey="elem4">Maintenance and Operation Plans Development</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                            <Nav.Link eventKey="elem5">HVAC System Design</Nav.Link>
+                            <Nav.Link eventKey="elem5">Fire Safety Plans (Development, Review, Revisions)</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                            <Nav.Link eventKey="elem6">Maintenance and Operations Plans Development</Nav.Link>
+                            <Nav.Link eventKey="elem6">Building Inspection</Nav.Link>
                             </Nav.Item>
-                            <Nav.Item>
-                            <Nav.Link eventKey="elem7">Fire Safety Plans (Development, Review, Revisions)</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                            <Nav.Link eventKey="elem8">Existing System Condition Survey</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                            <Nav.Link eventKey="elem9">Performance Measurement</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                            <Nav.Link eventKey="elem10">Project Management</Nav.Link>
-                            </Nav.Item>
+                            
                             
                         </Nav>
                         </Col>
                         <Col sm={8}>
                         <Tab.Content>
                             <Tab.Pane eventKey="elem1">
-                            Description 1.
+                            <ul>
+                                <li>Heating System Retrofits</li>
+                                <li>Plumbing Systems</li>
+                                <li>Backflow Prevention Systems</li>
+                                <li>HVAC Systems</li>
+                                <li>Design, drawings and specifications, building permits, construction review, and certification</li>
+                            </ul>
                             </Tab.Pane>
                             <Tab.Pane eventKey="elem2">
-                            Description 2
+                            Whether it is a heating plant, ventilation system, air-conditioning system, a plumbing system, 
+                            a roofing system, a garage slab, or any other building component, our engineering professionals 
+                            in the building services industry can provide you with a survey report complete with recommendations.
                             </Tab.Pane>
                             <Tab.Pane eventKey="elem3">
-                            Description 3
+                            Measuring the perofrmance of an existing system is the only way to make an educated
+                            investment decision that makes proper economic sense. We can help your decisions by
+                            measuring the performance of many building systems with non-intrusive methods using 
+                            the following measuring tools and interpreting the results with technical reports:
+                            <ul>
+                                <li>Temperature loggers</li>
+                                <li>Clamp-on flowmeter</li>
+                                <li>Air flow meter</li>
+                                <li>Watt-hour meter</li>
+                                <li>Light-level meter</li>
+                                <li>Noise level meter</li>
+                            </ul>
                             </Tab.Pane>
                             <Tab.Pane eventKey="elem4">
-                            Description 4
+                            Our building operations and maintenance professionals can develop and upkeep policies
+                            and programs for your building system operations such as:
+                            <ul>
+                                <li>Periodic inspections and reports by qualified building operators</li>
+                                <li>Maintenance specifications development</li>
+                                <li>Safety planning development</li>
+                                <li>Excel based reporting systems with real-time reporting</li>
+                            </ul>
                             </Tab.Pane>
                             <Tab.Pane eventKey="elem5">
-                            Description 5
+                            The Ontario Fire Code requires that residential, insitutional and industrial buildings to have
+                            an approved Fire Safety plan. The Fire Safety plan should be reviewed and revised 
+                            anually. We develop Fire Safety plans customized to each building, review or revise
+                            existing plans to meet current standards. Our services include presenting developed Fire Safety plans
+                            to the relevant municipality and obtaining approval on your behalf 
                             </Tab.Pane>
                             <Tab.Pane eventKey="elem6">
                             Description 6
-                            </Tab.Pane>
-                            <Tab.Pane eventKey="elem7">
-                            Description 7
-                            </Tab.Pane>
-                            <Tab.Pane eventKey="elem8">
-                            Description 8
-                            </Tab.Pane>
-                            <Tab.Pane eventKey="elem9">
-                            Description 9
-                            </Tab.Pane>
-                            <Tab.Pane eventKey="elem10">
-                            Description 10
                             </Tab.Pane>
                             <Tab.Pane eventKey = "default">
                                 Default
@@ -164,7 +171,7 @@ export const Home = () => {
                         <div>
                             <h5>Associate</h5>
                             <h6>Medil Gamage</h6>
-                            <p>MSc, P.Eng., C Eng, MIMechE (UK), MASHRAE</p>
+                            <p>BSc.Eng, P.Eng.</p>
                         </div>
                     </div>
                 </Col>
