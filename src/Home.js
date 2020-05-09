@@ -149,8 +149,8 @@ export const Home = () => {
                             following ASTM E2018 Standard Guide for various types of needs. Are you planning to invest in a new property? We can provide you with a 
                             <b> pre-purchase report</b> to make an informed decision. If you are planning to refinancing your property, we can provide you with a 
                             <b> refinancing report</b> that your bank will likely ask for. You may need to know the condition of building prior to leasing or the end
-                            of a lease term. Our <b>pre-lease</b> and <b>end-of-lease</b> assessments can help you to enjoy a hassle-free experience. If you are 
-                            planning new construction, keep in mind construction activities can have adverse effects on neighbouring buildings. In this type of scenario,
+                            of a lease term. Our <b>pre-lease</b> and <b>end-of-lease</b> assessments can help you to enjoy a hassle-free leasing experience. If you are 
+                            planning new construction, keep in mind that construction activities can have adverse effects on neighbouring buildings. In this type of scenario,
                             we can help with <b>pre-construction</b> and <b>post-construction</b> surveys on neighbouring buildings to protect you from damage claims.
                             <b> Capital planning</b> is another area where we can offer you our services. Our reports can help you in timing expenditures, giving you 
                             financial breathing room and reducing overall costs.
