@@ -205,7 +205,7 @@ export const Home = () => {
                         <div>
                             <h5>Associate</h5>
                             <h6>Medil Gamage</h6>
-                            <p>BSc.Eng, P.Eng.</p>
+                            <p>P.Eng.</p>
                         </div>
                     </div>
                 </Col>
