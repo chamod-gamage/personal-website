@@ -145,8 +145,8 @@ export const Home = () => {
                             </div>
                             </Tab.Pane>
                             <Tab.Pane eventKey="elem6">
-                            We have many years of experience in evaluating buildings - residential, commercial, and institutional - based on a thorough inspection
-                            following ASTM E2018 Standard Guide for various types of needs. Are you planning to invest in a new property? We can provide you with a 
+                            We have many years of experience in evaluating buildings - residential, commercial, industrial, and institutional - for various purposes, based on a thorough inspection
+                            following ASTM E2018 Standard Guide. Are you planning to invest in a new property? We can provide you with a 
                             <b> pre-purchase report</b> to make an informed decision. If you are planning to refinancing your property, we can provide you with a 
                             <b> refinancing report</b> that your bank will likely ask for. You may need to know the condition of building prior to leasing or the end
                             of a lease term. Our <b>pre-lease</b> and <b>end-of-lease</b> assessments can help you to enjoy a hassle-free leasing experience. If you are 
