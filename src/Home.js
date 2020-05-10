@@ -151,7 +151,7 @@ export const Home = () => {
                             <b> refinancing report</b> that your bank will likely ask for. You may need to know the condition of building prior to leasing or the end
                             of a lease term. Our <b>pre-lease</b> and <b>end-of-lease</b> assessments can help you to enjoy a hassle-free leasing experience. If you are 
                             planning new construction, keep in mind that construction activities can have adverse effects on neighbouring buildings. In this type of scenario,
-                            we can help with <b>pre-construction</b> and <b>post-construction</b> surveys on neighbouring buildings to protect you from damage claims.
+                            we can help you with <b>pre-construction</b> and <b>post-construction</b> surveys on neighbouring buildings to protect you from damage claims.
                             <b> Capital planning</b> is another area where we can offer you our services. Our reports can help you in timing expenditures, giving you 
                             financial breathing room and reducing overall costs.
                             </Tab.Pane>
