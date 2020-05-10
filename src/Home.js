@@ -23,7 +23,7 @@ const image1 = require("./assets/SystemDesign.jfif")
 const image2 = require("./assets/Survey.jfif")
 const image3 = require("./assets/NoiseMeter.jpg")
 const image4 = require("./assets/Planning.jpg")
-const image5 = require("./assets/FireSafety.jpg")
+const image5 = require("./assets/Fire.jpg")
 const don = require("./assets/Don.jfif")
 const medil = require("./assets/Medil.jpg")
 
@@ -135,20 +135,24 @@ export const Home = () => {
                             </div>
                             </Tab.Pane>
                             <Tab.Pane eventKey="elem5">
+                            <div style = {{display: "flex", flexDirection: "row"}}>
+                            <div style = {{flex: 1}}><p>
                             The Ontario Fire Code requires that residential, insitutional and industrial buildings to have
                             an approved Fire Safety plan. The Fire Safety plan should be reviewed and revised 
                             annually. We develop Fire Safety plans customized to each building, review or revise
                             existing plans to meet current standards. Our services include presenting developed Fire Safety plans
                             to the relevant municipality and obtaining approval on your behalf. 
-                            <div style = {{textAlign: "center"}}>
+                            </p></div>
+                            <div style = {{textAlign: "center", flex: 1}}>
                                 <img src = {image5} style = {{width: "80%", maxWidth: 400}} />
+                            </div>
                             </div>
                             </Tab.Pane>
                             <Tab.Pane eventKey="elem6">
                             We have many years of experience in evaluating buildings - residential, commercial, industrial, and institutional - for various purposes, based on a thorough inspection
                             following ASTM E2018 Standard Guide. Are you planning to invest in a new property? We can provide you with a 
                             <b> pre-purchase report</b> to make an informed decision. If you are planning to refinancing your property, we can provide you with a 
-                            <b> refinancing report</b> that your bank will likely ask for. You may need to know the condition of building prior to leasing or the end
+                            <b> refinancing report</b> that your bank will likely ask for. You may need to know the condition of building prior to leasing or at the end
                             of a lease term. Our <b>pre-lease</b> and <b>end-of-lease</b> assessments can help you to enjoy a hassle-free leasing experience. If you are 
                             planning new construction, keep in mind that construction activities can have adverse effects on neighbouring buildings. In this type of scenario,
                             we can help you with <b>pre-construction</b> and <b>post-construction</b> surveys on neighbouring buildings to protect you from damage claims.
