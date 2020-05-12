@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect, Fragment} from 'react'
 import {Layout} from "./components/Layout"
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Tabs from 'react-bootstrap/Tabs'
@@ -15,6 +15,8 @@ import Image from 'react-bootstrap/Image'
 import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
+import { Frame } from "framer";
+import "./App.css"
 
 const panel = require("./assets/Saxo_Bank_HQ_building.jpg")
 const logo = require("./assets/blueLogo.png")
@@ -28,17 +30,39 @@ const don = require("./assets/Don.jfif")
 const medil = require("./assets/Medil.jpg")
 
 
+
 export const Home = () => {
+  const [idx, setIdx] = useState(0)
+
+  const Ticker = () => {
+
+    const roles = ["Developer", "Designer", "Student", "Teacher", "Musician", "Explorer", "Creator"]
+    
+    return(
+      <h3 onAnimationEnd = {() => {setIdx(idx+1); console.log(idx)}}>
+        {roles[idx % roles.length]}
+      </h3>
+    )
+  }
     
 
     return(
 
         <div>
-            <Jumbotron style = {{backgroundImage:  `url(${panel})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundColor: 'rgba(200,200,200,0.5)'}}>
-                <img src = {logo} style = {{maxWidth: 200}}/>
-                <p style = {{color: "white"}}><i>
-                    Providing our clients with affordable, optimal, professional solutions to challenges in Building Services Engineering
-                </i></p>
+            <Jumbotron style = {{backgroundColor: '#131313'}}>
+                <header className="App-header">
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto+Mono|Raleway"/>
+                    <div style = {{border: "3px solid #e3e464", padding: 10, textAlign: "center"}}>
+                    <h1><i>
+                    {"\u00A0 chamod gamage \u00A0"}
+                    </i></h1>
+                    </div>
+                    <div style = {{height: 10}}/>
+                    <Ticker/>
+                    
+                </header>
+                <div style = {{height: "100vh"}}></div>
+            {/* <MyComponent/> */}
             </Jumbotron>
             
             {/* <div style = {{height: window.innerHeight*0.95, width: '100%',backgroundPosition: 'center',backgroundSize: `cover`, backgroundImage : `url(${panel})`, backgroundRepeat: 'no-repeat', overflow: 'hidden',padding: "20%",textAlign: "center", alignItems: 'center'}}>
@@ -248,3 +272,92 @@ export const Home = () => {
         </div>
     )
 }
+
+
+
+function AnimateComponent(props) {
+  
+    const string = Array.from(props.item);
+    // Add staggering effect to the children of the container
+    const containerVariants = {
+      before: {},
+      after: { transition: { staggerChildren: 0.06 } }
+    };
+  
+    // Variants for animating each letter
+    const letterVariants = {
+      before: {
+        opacity: 0,
+        y: 20,
+        transition: {
+          type: "spring",
+          damping: 16,
+          stiffness: 200
+        }
+      },
+      after: {
+        opacity: 1,
+        y: 0,
+        transition: {
+          type: "spring",
+          damping: 16,
+          stiffness: 200
+        }
+      }
+    };
+  
+    return (
+      <Frame
+        center={"y"}
+        height={26}
+        width={"100%"}
+        background={""}
+        style={{
+          fontFamily: "Raleway",
+          fontWeight: "bold",
+          letterSpacing: "-0.04em",
+          fontSize: 26,
+          color: "#FFF",
+          display: "flex", // Set the display value to flex
+          justifyContent: "center" // Center all children elements on the x axis
+        }}
+        variants={containerVariants}
+        initial={"before"}
+        animate={"after"}
+      >
+        {string.map((letter, index) => (
+          <Frame
+            key={index}
+            width={"auto"} // Set the width to the width of the letter
+            height={26} // Set the height to the height of the text
+            background={""}
+            style={{ position: "relative" }} // Position elements
+            variants={letterVariants}
+          >
+            {letter === " " ? "\u00A0" : letter}
+          </Frame>
+        ))}
+      </Frame>
+    );
+  }
+  
+  export function MyComponent() {
+    const [idx, setIdx] = useState(0)
+    let roles = ["Developer", "Designer", "Student", "Teacher", "Musician"];
+    useEffect(() => {
+      
+      const interval = setInterval(() => {
+        setIdx(idx + 1)
+      }, 5000);
+      return () => {
+        clearInterval(interval);
+      }
+    }, [idx]);
+    
+    return (
+      <Fragment>
+          <AnimateComponent item={roles[idx % roles.length]} />    
+      </Fragment>
+    );
+  }
+  

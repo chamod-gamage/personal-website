@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -14,13 +15,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* background-color: white; */
+  /* min-height: 100vh; */
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* font-size: calc(10px); */
   color: white;
 }
 
@@ -36,3 +38,77 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  margin: 0;
+}
+
+h1 {
+  
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 5vw;
+  color: #e3e464;
+  text-align: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+h2 {
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 2vw;
+  color: white;
+  margin-top: 4vh;
+  text-align: center;
+  line-height:  20%;
+  z-index: 0;
+}
+
+h3 {
+  font-family: Raleway;
+  margin: 0; 
+  padding: 10;
+  color: white; 
+  font-size: 3vw; 
+  line-height: 1.2;
+  opacity: 0; 
+  animation: SubAnimation; 
+  animation-duration: 1.5s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes SubAnimation  {
+  0% {
+    opacity: 0; 
+    transform: translateX(-50vw);
+  }
+  50% {
+    opacity: 1; 
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(50vw);
+    /* transform: scale(0) */
+    
+  }
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+
+
+
+
+
+
