@@ -43,11 +43,32 @@ body {
   margin: 0;
 }
 
+hNavBrand {
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 30px;
+  color: #e3e464;
+  text-align: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+hNav {
+  padding: 5px 10px 5px 10px;
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 20px;
+  color: #e3e464;
+  text-align: center;
+  justify-content: center;
+  z-index: 0;
+}
+
 h1 {
   
   font-family: Raleway;
   font-weight: bold;
-  font-size: 5vw;
+  font-size: 40;
   color: #e3e464;
   text-align: center;
   justify-content: center;
@@ -57,11 +78,11 @@ h1 {
 h2 {
   font-family: Raleway;
   font-weight: bold;
-  font-size: 2vw;
+  font-size: 20px;
   color: white;
-  margin-top: 4vh;
+  margin-top: 8px;
   text-align: center;
-  line-height:  20%;
+  line-height:  50%;
   z-index: 0;
 }
 
@@ -70,22 +91,38 @@ h3 {
   margin: 0; 
   padding: 10;
   color: white; 
-  font-size: 3vw; 
+  font-size: 25; 
   line-height: 1.2;
   opacity: 0; 
   animation: SubAnimation; 
-  animation-duration: 1.5s;
-  animation-delay: 0.1s;
+  animation-duration: 2s;
+  animation-delay: 0s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
+
+.minicard {
+  display: "flex";
+  align-items: "center";
+  justify-content: "center";
+  width: 200px;
+  background-color: #e3e464;
+}
+.maxcard {
+  background-color: #1d1f2f;
+}
+
 
 @keyframes SubAnimation  {
   0% {
     opacity: 0; 
     transform: translateX(-50vw);
   }
-  50% {
+  30% {
+    opacity: 1; 
+    transform: translateX(0px);
+  }
+  70% {
     opacity: 1; 
     transform: translateX(0px);
   }

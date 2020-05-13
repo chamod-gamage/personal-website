@@ -4,8 +4,10 @@ import { render } from '@testing-library/react'
 
 export const Layout = (props) => (
     <Fragment>
-    <Container>
-        {props.children}
+    <Container style = {{padding:" 0vw 10vw 0vw 10vw"}}>
+        
+                {props.children}
+            
     </Container>
     
     </Fragment>
