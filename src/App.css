@@ -15,7 +15,7 @@
 }
 
 .App-header {
-  /* background-color: white; */
+  background-color: #131313;
   /* min-height: 100vh; */
   display: flex;
   overflow: hidden;
@@ -99,6 +99,18 @@ h3 {
   animation-delay: 0s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+
+intro {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  margin-top: 8px;
+  text-align: left;
+  line-height:  120%;
+  z-index: 0;
 }
 
 .minicard {

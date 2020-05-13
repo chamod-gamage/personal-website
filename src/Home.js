@@ -1,4 +1,5 @@
 import React, {useState, useEffect, Fragment} from 'react'
+import {Container} from 'react-bootstrap'
 import {Layout} from "./components/Layout"
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Tabs from 'react-bootstrap/Tabs'
@@ -16,6 +17,10 @@ import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
 import { Frame } from "framer";
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import MailIcon from '@material-ui/icons/Mail';
 // import Card from 'react-bootstrap/Card'
 import "./App.css"
 
@@ -27,7 +32,7 @@ const image2 = require("./assets/Survey.jfif")
 const image3 = require("./assets/NoiseMeter.jpg")
 const image4 = require("./assets/Planning.jpg")
 const image5 = require("./assets/Fire.jpg")
-const don = require("./assets/Don.jfif")
+const me = require("./assets/me.jpg")
 const medil = require("./assets/Medil.jpg")
 
 
@@ -58,29 +63,78 @@ export const Home = () => {
       </Fragment>
      )
   }
+
+  const HeaderCard = (props) => {
+    return(
+      <Card className = "minicard">
+        <div style = {{height: 5}}/>
+          <h2 style = {{color: "#131313"}}>{props.title}</h2>
+        <div style = {{height: 5}}/>
+      </Card>
+    )
+  }
   
+  const Introduction = (props) => {
+    return(
+      <Container>
+        <Row>
+          <Col md = {true} style = {{textAlign: "center"}}>
+            <Image src = {me} roundedCircle  style = {{border: "1px solid #1d1f2f" ,width: "15vmax", height: "15vmax"}}/>
+          </Col>
+          {/* <Col md = {1}/> */}
+          
+          <Col md = {8} >
+            <Row style = {{textAlign: "left"}}>
+            <intro>
+              Hi! I'm Chamod. I'm a Systems Design Engineering student at the University of Waterloo passionate about tech
+              and using it to improve the lives of people. When I'm not busy bringing my ideas to life or developing new skills, 
+              you can catch me on my bike outside or scrolling through r/NBA.
+            </intro>
+            </Row>
+            <br/>
+            <Row>
+              <h1>
+                {"\u0020"}
+              <a href = "https://github.com/chamod-gamage" target = "_blank"><GitHubIcon fontSize = "inherit"/></a>
+              {"\u0020"}
+              <a href = "https://www.linkedin.com/in/chamod-gamage/" target = "_blank"><LinkedInIcon fontSize = "inherit"/></a>
+              {"\u0020"}
+              <a href = "https://www.instagram.com/chamod.og/" target = "_blank"><InstagramIcon fontSize = "inherit"/></a>
+              {"\u0020"}
+              <a href = "mailto: chamodgamage26@gmail.com" target = "_blank"><MailIcon fontSize = "inherit"/></a>
+              {"\u0020"}
+              
+              </h1>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
+    )  
+
+  }
     
 
     return(
 
         <div>
-            <Jumbotron style = {{backgroundColor: '#131313', borderRadius: 0}}>
+            <Jumbotron style = {{backgroundColor: '#131313', borderRadius: 0, margin: 0, zIndex: 20}}>
                 <header className="App-header">
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto+Mono|Raleway"/>
                     <Name/>
-                    <Ticker/>                   
+                    <Ticker/>
+                                      
                 </header>
-                <div style = {{height: 30}}/>
+                <div style = {{height: 60}}/>
                 <Layout>
-                  <Card className = "minicard">
-                    <div style = {{height: 5}}/>
-                    <h2 style = {{color: "#131313"}}>Experience</h2>
-                    <div style = {{height: 5}}/>
+                  <Introduction/>
+                  <HeaderCard title = {"Experience"}/> 
+                  <Card className = "maxcard">
+                    Experience
                   </Card>
                 </Layout>
-            {/* <MyComponent/> */}
             </Jumbotron>
-            
+              
+
             
             
         </div>
