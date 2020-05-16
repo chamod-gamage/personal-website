@@ -133,8 +133,11 @@ export const Home = () => {
           {props.description}
           
         </div>
+        <div style = {{height: 20}}/>
+        
 
       </Row>
+     
       </Fragment>
     )
   }
@@ -166,7 +169,7 @@ export const Home = () => {
       company: "(Self-Employed)",
       description: "Honeybee Hub is a digital marketplace startup connecting researchers and research study participants. BLAH BLAH BLAH BLAH"
     },
-    
+
     {
       title: "Assistant Director @",
       date: "Sep 2016 - Jan 2019",
@@ -175,6 +178,23 @@ export const Home = () => {
     }
 
   ]
+
+  const Experience = () => {
+    return(
+      <Fragment>
+      <HeaderCard title = {"Experience"}/> 
+      <Card style = {{backgroundColor: "#1d1f2f"}}>
+      <div style = {{height: 10}}/>
+        <Container style = {{padding: "5%"}}>
+        {jobs.map(job => {
+          return(<Job title = {job.title} company = {job.company} description = {job.description} date = {job.date}/>)
+        })}
+        <div style = {{height: 100}}/>
+        </Container>
+      </Card>
+      </Fragment>
+    )
+  }
   
 
     return(
@@ -187,25 +207,11 @@ export const Home = () => {
                     <Ticker/>
                                       
                 </header>
-                <div style = {{height: 60}}/>
+                <div style = {{height: 30}}/>
                 <Layout>
                   <Introduction/>
-                  <HeaderCard title = {"Experience"}/> 
-                  {/* <p className = "section">>Experience</p> */}
-
-                  <Card style = {{backgroundColor: "#1d1f2f"}}>
                   <div style = {{height: 10}}/>
-                    <Container style = {{padding: "5%"}}>
-                    {jobs.map(job => {
-                      return(<Job title = {job.title} company = {job.company} description = {job.description} date = {job.date}/>)
-                    })}
-                    
-                    {/* <Job title = "Junior DevOps Developer" company = "Honeybee Hub Inc." description = {descriptions[0]}/> */}
-                    {/* <Job title = "Junior DevOps Developer" company = "Honeybee Hub Inc." description = {descriptions[0]}/> */}
-
-                    <div style = {{height: 100}}/>
-                    </Container>
-                  </Card>
+                  <Experience/>
                 </Layout>
             </Jumbotron>
               
