@@ -78,12 +78,13 @@ export const Home = () => {
     return(
       <Container>
         <Row>
-          <Col md = {true} style = {{textAlign: "center"}}>
-            <Image src = {me} roundedCircle  style = {{border: "1px solid #1d1f2f" ,width: "15vmax", height: "15vmax"}}/>
+          <Col md = {3} style = {{textAlign: "center"}}>
+            <Image src = {me} className = "profile" roundedCircle  style = {{}}/>
+            <div style = {{height: 10}}/>
           </Col>
           {/* <Col md = {1}/> */}
           
-          <Col md = {8} >
+          <Col md = {9} >
             <Row style = {{textAlign: "left"}}>
             <intro>
               Hi! I'm Chamod. I'm a Systems Design Engineering student at the University of Waterloo passionate about tech

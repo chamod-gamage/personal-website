@@ -101,7 +101,10 @@ h3 {
   animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-
+.profile {
+  border: 1px solid #1d1f2f;
+  width: 100%;
+}
 intro {
   font-family: Montserrat;
   font-weight: bold;
@@ -141,6 +144,30 @@ intro {
   100% {
     opacity: 0;
     transform: translateX(50vw);
+    /* transform: scale(0) */
+    
+  }
+}
+
+@keyframes RollAnimation  {
+  25% {
+    opacity: 1;
+    scale: 0.1; 
+    transform: rotate(90deg);
+  }
+  50% {
+    opacity: 1; 
+    scale: 0.33;
+    transform: rotate(180deg);
+  }
+  75% {
+    opacity: 1; 
+    scale: 0.7;
+    transform: rotate(270deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(0deg);
     /* transform: scale(0) */
     
   }
