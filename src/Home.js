@@ -68,7 +68,7 @@ export const Home = () => {
     return(
       <Card className = "minicard">
         <div style = {{height: 5}}/>
-          <h2 style = {{color: "#131313"}}>{props.title}</h2>
+          <h2 style = {{color: "#131313"}}><b>{props.title}</b></h2>
         <div style = {{height: 5}}/>
       </Card>
     )
@@ -113,7 +113,69 @@ export const Home = () => {
     )  
 
   }
+
+  const Job = (props) => {
+    return (
+      <Fragment>
+      <Row>
+        <Col md = "auto" style = {{paddingLeft: 0}}>
+          <div className = "job-title"><em>{props.title}</em></div>
+        </Col>
+        <Col style = {{paddingLeft: 0}}>
+        <div className = "job">{props.company}</div>
+        </Col>
+        <Col md = "auto" style = {{marginRight: 0, paddingRight: 0, marginLeft: "auto"}}>
+        <div className = "date">{props.date}</div>
+        </Col>
+      </Row>
+      <Row>
+        <div className = "describe">
+          {props.description}
+          
+        </div>
+
+      </Row>
+      </Fragment>
+    )
+  }
     
+  const jobs = [
+    {
+      title: "Junior DevOps Developer @",
+      date: "May 2020 - Present",
+      company: "Honeybee Hub Inc.",
+      description: "Honeybee Hub is a digital marketplace startup connecting researchers and research study participants. BLAH BLAH BLAH BLAH"
+    },
+    {
+      title: "Full Stack Web Developer (Co-op) @",
+      date: "Jan 2020 - Apr 2020",
+      company: "Honeybee Hub Inc.",
+      description: "Honeybee Hub is a digital marketplace startup connecting researchers and research study participants. BLAH BLAH BLAH BLAH"
+    },
+    
+    {
+      title: "Lead Mechanical Executive @",
+      date: "Sep 2015 - Jun 2019",
+      company: "Absolute Robotics",
+      description: "Honeybee Hub is a digital marketplace startup connecting researchers and research study participants. BLAH BLAH BLAH BLAH"
+    },
+
+    {
+      title: "Piano Teacher",
+      date: "Jul 2017 - Jan 2019",
+      company: "(Self-Employed)",
+      description: "Honeybee Hub is a digital marketplace startup connecting researchers and research study participants. BLAH BLAH BLAH BLAH"
+    },
+    
+    {
+      title: "Assistant Director @",
+      date: "Sep 2016 - Jan 2019",
+      company: "PLASP",
+      description: "Honeybee Hub is a digital marketplace startup connecting researchers and research study participants. BLAH BLAH BLAH BLAH"
+    }
+
+  ]
+  
 
     return(
 
@@ -129,8 +191,20 @@ export const Home = () => {
                 <Layout>
                   <Introduction/>
                   <HeaderCard title = {"Experience"}/> 
-                  <Card className = "maxcard">
-                    Experience
+                  {/* <p className = "section">>Experience</p> */}
+
+                  <Card style = {{backgroundColor: "#1d1f2f"}}>
+                  <div style = {{height: 10}}/>
+                    <Container style = {{padding: "5%"}}>
+                    {jobs.map(job => {
+                      return(<Job title = {job.title} company = {job.company} description = {job.description} date = {job.date}/>)
+                    })}
+                    
+                    {/* <Job title = "Junior DevOps Developer" company = "Honeybee Hub Inc." description = {descriptions[0]}/> */}
+                    {/* <Job title = "Junior DevOps Developer" company = "Honeybee Hub Inc." description = {descriptions[0]}/> */}
+
+                    <div style = {{height: 100}}/>
+                    </Container>
                   </Card>
                 </Layout>
             </Jumbotron>

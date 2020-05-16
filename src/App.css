@@ -57,7 +57,7 @@ hNav {
   padding: 5px 10px 5px 10px;
   font-family: Raleway;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.3rem;
   color: #e3e464;
   text-align: center;
   justify-content: center;
@@ -78,7 +78,7 @@ h1 {
 h2 {
   font-family: Raleway;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.3rem;
   color: white;
   margin-top: 8px;
   text-align: center;
@@ -95,7 +95,7 @@ h3 {
   line-height: 1.2;
   opacity: 0; 
   animation: SubAnimation; 
-  animation-duration: 2s;
+  animation-duration: 200s;
   animation-delay: 0s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -117,14 +117,81 @@ intro {
 }
 
 .minicard {
-  display: "flex";
-  align-items: "center";
-  justify-content: "center";
+  display: block;
+  text-align: right;
+  align-items: right;
+  justify-content: right;
   width: 200px;
   background-color: #e3e464;
 }
+
+.year {
+  padding: 0;
+  display: block;
+  max-width: 100px;
+  margin: 0;
+  text-align: center;
+  background-color: #e3e464;
+}
+
 .maxcard {
   background-color: #1d1f2f;
+}
+
+.section {
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #e3e464;
+  text-align: left;
+  justify-content: center;
+  z-index: 0;
+}
+
+ .job {
+  width: fit-content;
+  font-family: Open Sans;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: white;
+  margin-top: 8px;
+  text-align: center;
+  line-height:  110%;
+  z-index: 0;
+}
+
+.date {
+  width: fit-content;
+  font-family: Open Sans;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: white;
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: 0;
+  text-align: center;
+  line-height:  110%;
+  z-index: 0;
+}
+
+.job-title {
+  width: fit-content;
+  font-family: Open Sans;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #4a93ff;
+  margin-top: 8px;
+  text-align: center;
+  line-height:  110%;
+  z-index: 0;
+}
+
+.describe {
+  font-family: Open Sans;
+  font-size: 1rem;
+  color: white;
+  margin-top: 8px;
+  line-height: 100%
 }
 
 
