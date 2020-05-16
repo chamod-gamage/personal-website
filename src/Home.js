@@ -23,17 +23,11 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import MailIcon from '@material-ui/icons/Mail';
 // import Card from 'react-bootstrap/Card'
 import "./App.css"
+import { emphasize } from '@material-ui/core'
 
-const panel = require("./assets/Saxo_Bank_HQ_building.jpg")
-const logo = require("./assets/blueLogo.png")
-const PEO = require("./assets/professional-engineers-ontario-logo.png")
-const image1 = require("./assets/SystemDesign.jfif")
-const image2 = require("./assets/Survey.jfif")
-const image3 = require("./assets/NoiseMeter.jpg")
-const image4 = require("./assets/Planning.jpg")
-const image5 = require("./assets/Fire.jpg")
+const ems = require("./assets/ems.png")
 const me = require("./assets/me.jpg")
-const medil = require("./assets/Medil.jpg")
+
 
 
 
@@ -79,7 +73,7 @@ export const Home = () => {
       <Container>
         <Row>
           <Col md = {3} style = {{textAlign: "center"}}>
-            <Image src = {me} className = "profile" roundedCircle  style = {{}}/>
+            <Image src = {me} className = "profile" roundedCircle  />
             <div style = {{height: 10}}/>
           </Col>
           {/* <Col md = {1}/> */}
@@ -118,23 +112,32 @@ export const Home = () => {
     return (
       <Fragment>
       <Row>
-        <Col md = "auto" style = {{paddingLeft: 0}}>
+        <Col md = "auto" style = {{paddingLeft: 5}}>
           <div className = "job-title"><em>{props.title}</em></div>
         </Col>
-        <Col style = {{paddingLeft: 0}}>
+        <Col style = {{paddingLeft: 5}}>
         <div className = "job">{props.company}</div>
         </Col>
-        <Col md = "auto" style = {{marginRight: 0, paddingRight: 0, marginLeft: "auto"}}>
+        <Col md = "auto" style = {{marginRight: 0, paddingRight: 5, marginLeft: "auto"}}>
         <div className = "date">{props.date}</div>
         </Col>
       </Row>
       <Row>
+        <Col style = {{padding: "0px 5px 0px 5px"}}>
         <div className = "describe">
           {props.description}
           
         </div>
+        <div style = {{height: 5}}/>
+        {props.skills.map(skill => {
+            return(
+              <div className = {"skillItemShape"}>
+                <p className = {"skillItem"}>{skill}</p>
+              </div>
+            )
+          })}
         <div style = {{height: 20}}/>
-        
+        </Col>
 
       </Row>
      
@@ -147,34 +150,39 @@ export const Home = () => {
       title: "Junior DevOps Developer @",
       date: "May 2020 - Present",
       company: "Honeybee Hub Inc.",
-      description: "Honeybee Hub is a digital marketplace startup connecting researchers and research study participants. BLAH BLAH BLAH BLAH"
+      description: "Honeybee Hub is a digital marketplace startup connecting researchers and research study participants. BLAH BLAH BLAH BLAH",
+      skills: ["Kubernetes", "Docker", "Google Cloud Platform", "MS Azure"]
     },
     {
       title: "Full Stack Web Developer (Co-op) @",
       date: "Jan 2020 - Apr 2020",
       company: "Honeybee Hub Inc.",
-      description: "Honeybee Hub is a digital marketplace startup connecting researchers and research study participants. BLAH BLAH BLAH BLAH"
+      description: "Honeybee Hub is a digital marketplace startup connecting researchers and research study participants. BLAH BLAH BLAH BLAH",
+      skills: ["React.js", "Node.js", "MongoDB", "Mongoose.js", "Express.js", "HTML", "CSS"]
     },
     
     {
       title: "Lead Mechanical Executive @",
       date: "Sep 2015 - Jun 2019",
       company: "Absolute Robotics",
-      description: "Honeybee Hub is a digital marketplace startup connecting researchers and research study participants. BLAH BLAH BLAH BLAH"
+      description: "Honeybee Hub is a digital marketplace startup connecting researchers and research study participants. BLAH BLAH BLAH BLAH",
+      skills: [ "Java", "Fundraising", "Team Management","Mechanical Design", "Woodworking"]
     },
 
     {
       title: "Piano Teacher",
       date: "Jul 2017 - Jan 2019",
       company: "(Self-Employed)",
-      description: "Honeybee Hub is a digital marketplace startup connecting researchers and research study participants. BLAH BLAH BLAH BLAH"
+      description: "Honeybee Hub is a digital marketplace startup connecting researchers and research study participants. BLAH BLAH BLAH BLAH",
+      skills: ["Entrepreneurship"]
     },
 
     {
       title: "Assistant Director @",
       date: "Sep 2016 - Jan 2019",
       company: "PLASP",
-      description: "Honeybee Hub is a digital marketplace startup connecting researchers and research study participants. BLAH BLAH BLAH BLAH"
+      description: "Honeybee Hub is a digital marketplace startup connecting researchers and research study participants. BLAH BLAH BLAH BLAH",
+      skills: ["Volunteerism"]
     }
 
   ]
@@ -183,11 +191,20 @@ export const Home = () => {
     return(
       <Fragment>
       <HeaderCard title = {"Experience"}/> 
-      <Card style = {{backgroundColor: "#1d1f2f"}}>
+      <div style = {{height: 10}}/>
+      {/* <Card style = {{backgroundColor: "#1d1f2f"}}> */}
+      <Card className = "projects">
+
       <div style = {{height: 10}}/>
         <Container style = {{padding: "5%"}}>
         {jobs.map(job => {
-          return(<Job title = {job.title} company = {job.company} description = {job.description} date = {job.date}/>)
+          return(<Job 
+            title = {job.title} 
+            company = {job.company} 
+            description = {job.description} 
+            date = {job.date}
+            skills = {job.skills}
+            />)
         })}
         <div style = {{height: 100}}/>
         </Container>
@@ -195,7 +212,94 @@ export const Home = () => {
       </Fragment>
     )
   }
+
+  const Project = (props) => {
+    return (
+      <Fragment>
+      <Row>
+        <Col md = "auto" style = {{paddingLeft: 0}}>
+          <div className = "job-title"><em>{props.title}</em></div>
+        </Col>
+        
+        <Col md = "auto" style = {{marginRight: 0, paddingRight: 0, marginLeft: "auto"}}>
+          
+            
+          
+        </Col>
+      </Row>
+      <div style = {{height: 10}}/>
+      <Row>
+        <Col style = {{padding: 15, textAlign: "center"}} md = {6}>
+          <img src = {props.image} style = {{maxWidth: "100%"}}/>
+          <div style = {{height: 5}}/>
+        </Col>
+        <Col style = {{padding: "0px 0px 0px 0px", textAlign: "center"}}>
+        {props.skills.map(skill => {
+            return(
+              <div className = {"skillItemShape"}>
+                <p className = {"skillItem"} >{skill}</p>
+              </div>
+            )
+          })}
+        <div style = {{height: 5}}/>
+        <div className = "describe">
+          {props.description}
+        </div>
+        <div style = {{height: 15}}/>
+        <a target="_blank" href={props.link}><button><p>
+          {props.buttonText}
+        </p></button></a>
+        
+        </Col>
+
+      </Row>
+     
+      </Fragment>
+    )
+  }
+
+  const Projects = () => {
+    return(
+      <Fragment>
+        <HeaderCard title = {"Projects"}/> 
+        {projects.map(project => {
+          return (
+            <Fragment>
+            
+            <div style = {{height: 10}}/>
+            <Card className = "projects">
+            <div style = {{height: 5}}/>
+              <Container style = {{padding: "5%"}}>
+              <Project 
+                title = {project.title} 
+                description = {project.description} 
+                skills={project.skills}
+                image = {project.image}
+                buttonText = {project.buttonText}
+                link = {project.link}
+              />
+              <div style = {{height: 10}}/>
+              </Container>
+            </Card>
+            </Fragment>
+          )
+    })}
+      </Fragment>
+    )
+  }
   
+  const projects = [
+    {
+      title: "Employee Management System",
+      skills: ["Java", "Java"],
+      image: ems,
+      buttonText: "Take a look at the code on GitHub",
+      link: "https://github.com/chamod-gamage",
+      description: "Honeybee Hub is a digital marketplace startup connecting researchers and research study participants. BLAH BLAH BLAH BLAH"
+    },
+    
+
+  ]
 
     return(
 
@@ -210,8 +314,10 @@ export const Home = () => {
                 <div style = {{height: 30}}/>
                 <Layout>
                   <Introduction/>
-                  <div style = {{height: 10}}/>
+                  <div style = {{height: 20}}/>
                   <Experience/>
+                  <div style = {{height: 20}}/>
+                  <Projects/>
                 </Layout>
             </Jumbotron>
               
