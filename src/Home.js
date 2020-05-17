@@ -112,10 +112,10 @@ export const Home = () => {
     return (
       <Fragment>
       <Row>
-        <Col md = "auto" style = {{paddingLeft: 5}}>
+        <Col md = "auto" >
           <div className = "job-title"><em>{props.title}</em></div>
         </Col>
-        <Col style = {{paddingLeft: 5}}>
+        <Col >
         <div className = "job">{props.company}</div>
         </Col>
         <Col md = "auto" style = {{marginRight: 0, paddingRight: 5, marginLeft: "auto"}}>
@@ -123,7 +123,7 @@ export const Home = () => {
         </Col>
       </Row>
       <Row>
-        <Col style = {{padding: "0px 5px 0px 5px"}}>
+        <Col >
         <div className = "describe">
           {props.description}
           
@@ -193,10 +193,10 @@ export const Home = () => {
       <HeaderCard title = {"Experience"}/> 
       <div style = {{height: 10}}/>
       {/* <Card style = {{backgroundColor: "#1d1f2f"}}> */}
-      <Card className = "projects">
+      {/* <Card className = "projects"> */}
 
       <div style = {{height: 10}}/>
-        <Container style = {{padding: "5%"}}>
+        {/* <Container style = {{padding: "5%"}}> */}
         {jobs.map(job => {
           return(<Job 
             title = {job.title} 
@@ -207,8 +207,8 @@ export const Home = () => {
             />)
         })}
         <div style = {{height: 100}}/>
-        </Container>
-      </Card>
+        {/* </Container> */}
+      {/* </Card> */}
       </Fragment>
     )
   }
@@ -292,6 +292,30 @@ export const Home = () => {
     {
       title: "Employee Management System",
       skills: ["Java", "Java"],
+      image: ems,
+      buttonText: "Take a look at the code on GitHub",
+      link: "https://github.com/chamod-gamage",
+      description: "Honeybee Hub is a digital marketplace startup connecting researchers and research study participants. BLAH BLAH BLAH BLAH"
+    },
+    {
+      title: "Personal Website",
+      skills: ["React.js", "HTML", "CSS", "Keyframes"],
+      image: ems,
+      buttonText: "Take a look at the code on GitHub",
+      link: "https://github.com/chamod-gamage",
+      description: "Honeybee Hub is a digital marketplace startup connecting researchers and research study participants. BLAH BLAH BLAH BLAH"
+    },
+    {
+      title: "PygamePaint",
+      skills: ["Python"],
+      image: ems,
+      buttonText: "Take a look at the code on GitHub",
+      link: "https://github.com/chamod-gamage",
+      description: "Honeybee Hub is a digital marketplace startup connecting researchers and research study participants. BLAH BLAH BLAH BLAH"
+    },
+    {
+      title: "Trashemon Go",
+      skills: ["React Native", "Node.js", "Firebase"],
       image: ems,
       buttonText: "Take a look at the code on GitHub",
       link: "https://github.com/chamod-gamage",

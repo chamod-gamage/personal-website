@@ -3,6 +3,7 @@ import {Nav, Navbar} from 'react-bootstrap'
 import KeyboardArrowDownOutlinedIcon from '@material-ui/icons/KeyboardArrowDownOutlined';
 import styled from 'styled-components'
 const logo = require("../assets/blueLogo.png")
+const resume = require('../assets/chamod-resume.pdf')
 // const Styles = styled.div`
 //     .navbar {
 //         background-color: #131313
@@ -33,7 +34,7 @@ export const NavigationBar = () => (
                     <Nav.Item><Nav.Link href = "/"><hnav>About</hnav></Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href = "#services"><hnav>Experiences</hnav></Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href = "#about"><hnav>Projects</hnav></Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href = "#contact"><hnav>Resume</hnav></Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href = {resume} target = "_blank"><hnav>Resume</hnav></Nav.Link></Nav.Item>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

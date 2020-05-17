@@ -96,7 +96,7 @@ h3 {
   line-height: 1.2;
   opacity: 0; 
   animation: SubAnimation; 
-  animation-duration: 200s;
+  animation-duration: 2s;
   animation-delay: 0s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -225,7 +225,7 @@ intro {
 
 .skillItem {
   font-family: 'Montserrat';
-  color: #e4e464ab;
+  color: whitesmoke;
   font-weight: bold;
   font-size: 1em;
   display: inline;
@@ -241,7 +241,7 @@ intro {
 }
 
 .skillItemShape {
-  background-color: #131313;
+  background-color: #4a93ff;
   padding: 0px;
   margin-top: 6px;
   margin-right: 5px;

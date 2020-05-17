@@ -7,7 +7,7 @@ import {Services} from './Services.js'
 import {NoMatch} from './NoMatch.js'
 import {Layout} from './components/Layout.js'
 import {NavigationBar} from './components/NavigationBar.js'
-
+const resume = require('./assets/chamod-resume.pdf')
 
 class App extends Component {
   render() {
@@ -20,6 +20,7 @@ class App extends Component {
                 <Route exact path = "/about" component = {About} />
                 <Route exact path = "/contact" component = {Contact} />
                 <Route exact path = "/services" component = {Services} />
+                {/* <Route exact path = "/resume" component = {resume}></Route> */}
               </Switch>
             </Layout>
             <Switch>
