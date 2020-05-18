@@ -1,9 +1,7 @@
 import React, {Component, useState} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import {Home} from './Home.js'
-import {Contact} from './Contact.js'
-import {About} from './About.js'
-import {Services} from './Services.js'
+
 import {NoMatch} from './NoMatch.js'
 import {Layout} from './components/Layout.js'
 // import {NavigationBar} from './Home.js'
@@ -13,7 +11,9 @@ const App = () => {
   const [selected, setSelected] = useState(0)
     return (
       <React.Fragment>
-        <Home/>
+        <Router>
+          <Route exact path = "/" component = {Home}/>
+        </Router>
         {/* <NavigationBar setSelected = {setSelected}/>
           <Router>
             <Layout>
