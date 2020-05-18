@@ -1,5 +1,5 @@
 import React, {useState, useEffect, Fragment, useRef} from 'react'
-import {Container} from 'react-bootstrap'
+import {Container, Nav, Navbar} from 'react-bootstrap'
 import {Layout} from "./components/Layout"
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Tabs from 'react-bootstrap/Tabs'
@@ -8,7 +8,7 @@ import TabContainer from 'react-bootstrap/TabContainer'
 import TabContent from 'react-bootstrap/TabContent'
 import TabPane from 'react-bootstrap/TabPane'
 import Button from 'react-bootstrap/Button'
-import Nav from 'react-bootstrap/Nav'
+
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
@@ -30,6 +30,12 @@ import {aboutRef, experienceRef, projectsRef} from './components/NavigationBar.j
 // import Card from 'react-bootstrap/Card'
 import "./App.css"
 import { emphasize } from '@material-ui/core'
+// import {Nav, Navbar} from 'react-bootstrap'
+import KeyboardArrowDownOutlinedIcon from '@material-ui/icons/KeyboardArrowDownOutlined';
+import styled from 'styled-components'
+const logo = require("./assets/me.jpg")
+const resume = require('./assets/chamod-resume.pdf')
+
 
 var scrollToElement = require('scroll-to-element');
  
@@ -44,8 +50,14 @@ const trashemon = require('./assets/trashemon.png')
 
 
 
+
 export const Home = () => {
   const [idx, setIdx] = useState(0)
+  const scrollToRef = (ref) =>
+    typeof window !== "undefined" && window.scrollTo(0, ref.current.offsetTop);
+  const EXPERIENCE = useRef(null)
+  const PROJECTS = useRef(null)
+  const ABOUT = useRef(null)
 
   const Ticker = () => {
 
@@ -58,6 +70,49 @@ export const Home = () => {
     )
   }
   
+  const NavigationBar = (props) => { 
+    
+
+    return(
+    
+    <Fragment>
+    {/*  <Styles> */}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto+Mono|Raleway"/>
+        <Navbar sticky = "top" expand = "sm" style = {{backgroundColor: "#131313"}}>
+            <Navbar.Brand href = "/"><hNavBrand><i>cg</i></hNavBrand></Navbar.Brand>
+            <Navbar.Toggle aria-controls = "basic-navbar-nav" style = {{backgroundColor: "#e3e464", padding: 0}}>
+                <hnav style = {{color: "#131313"}}>
+                    <KeyboardArrowDownOutlinedIcon/>
+                </hnav>
+            </Navbar.Toggle>
+            <Navbar.Collapse id = "basic-navbar-nav">
+                <Nav className = "ml-auto">
+                    <Nav.Item><Nav.Link  onClick={() => {
+                        if (ABOUT.current) {
+                          //@ts-ignore
+                          ABOUT.current.scrollIntoView({ behavior: "smooth" });
+                        }
+                      }}><hnav>About</hnav></Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link  onClick={() => {
+                        if (EXPERIENCE.current) {
+                          //@ts-ignore
+                          EXPERIENCE.current.scrollIntoView({ behavior: "smooth" });
+                        }
+                      }}  ><hnav>Experience</hnav></Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link onClick={() => {
+                        if (PROJECTS.current) {
+                          //@ts-ignore
+                          PROJECTS.current.scrollIntoView({ behavior: "smooth" });
+                        }
+                      }} ><hnav>Projects</hnav></Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href = {resume} target = "_blank"><hnav>Resume</hnav></Nav.Link></Nav.Item>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
+    {/*  </Styles> */}
+    </Fragment>
+  )}
+
   const Name = () => {
     return(
       <Fragment>
@@ -507,6 +562,8 @@ export const Home = () => {
     return(
 
         <div>
+            <NavigationBar/>
+         
             <Jumbotron style = {{backgroundColor: '#131313', borderRadius: 0, margin: 0, zIndex: 20}}>
                 <header className="App-header">
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto+Mono|Raleway"/>
@@ -517,25 +574,25 @@ export const Home = () => {
                                       
                 </header>
                 
-                <div style = {{height: 60}}/>
+                <div  ref = {ABOUT} style = {{height: 60}}/>
                 <Layout>
                   
                   <Introduction />
                   
                   <div style = {{height: 100}}/>
                   <Skills skills = {skills}/>
-                  <div  id = "experience"/>
+                  <div  ref = {EXPERIENCE} id = "experience"/>
                   <div style = {{height: 100}}/>
                   
                   <Experience />
-                  <div id = "projects"  style = {{height: 20}}/>
+                  <div id = "projects"  ref = {PROJECTS} style = {{height: 20}}/>
                   <div style = {{height: 100}}/>
                   <Projects />
                   <div style = {{height: 100}}/>
                   <Footer/>
                 </Layout>
             </Jumbotron>
-              
+        
 
             
             
