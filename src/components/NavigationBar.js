@@ -1,9 +1,12 @@
-import React, {Fragment} from 'react'
+import React, {Fragment, useRef, useState} from 'react'
 import {Nav, Navbar} from 'react-bootstrap'
 import KeyboardArrowDownOutlinedIcon from '@material-ui/icons/KeyboardArrowDownOutlined';
 import styled from 'styled-components'
-const logo = require("../assets/blueLogo.png")
+const logo = require("../assets/me.jpg")
 const resume = require('../assets/chamod-resume.pdf')
+const scrollToRef = (ref) =>
+    typeof window !== "undefined" && window.scrollTo(0, ref.current.offsetTop);
+
 // const Styles = styled.div`
 //     .navbar {
 //         background-color: #131313
@@ -18,7 +21,11 @@ const resume = require('../assets/chamod-resume.pdf')
 //     }
 // `
 
-export const NavigationBar = () => (
+export const NavigationBar = () => { 
+    const [selected, setSelected] = useState(0)
+
+    return(
+    
     <Fragment>
     {/*  <Styles> */}
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto+Mono|Raleway"/>
@@ -31,13 +38,13 @@ export const NavigationBar = () => (
             </Navbar.Toggle>
             <Navbar.Collapse id = "basic-navbar-nav">
                 <Nav className = "ml-auto">
-                    <Nav.Item><Nav.Link href = "/"><hnav>About</hnav></Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href = "#services"><hnav>Experiences</hnav></Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href = "#about"><hnav>Projects</hnav></Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href = "#about" onClick = {()=>{setSelected(0)}}><hnav>About</hnav></Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href = "#experience" onClick = {()=>{setSelected(1)}}><hnav>Experience</hnav></Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href = "#projects" onClick = {()=>{setSelected(2)}}><hnav>Projects</hnav></Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href = {resume} target = "_blank"><hnav>Resume</hnav></Nav.Link></Nav.Item>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
     {/*  </Styles> */}
     </Fragment>
-)
+)}
