@@ -61,7 +61,7 @@ export const Home = () => {
 
   const Ticker = () => {
 
-    const roles = ["Developer", "Designer", "Student", "Teacher", "Musician", "Explorer", "Creator"]
+    const roles = ["Full Stack Developer", "Designer", "Student", "Builder", "Leader", "Teacher", "Musician", "Explorer", "Creator"]
     
     return(
       <h3 onAnimationEnd = {() => {setIdx(idx+1); console.log(idx)}}>
@@ -160,13 +160,13 @@ export const Home = () => {
               <h1>
               <Col lg = "auto">
                 {"\u0020"}
-              <a href = "https://github.com/chamod-gamage" target = "_blank"><GitHubIcon fontSize = "inherit"/></a>
+              <a className = "h0" href = "https://github.com/chamod-gamage" target = "_blank"><GitHubIcon fontSize = "inherit"/></a>
               {"\u0020"}
-              <a href = "https://www.linkedin.com/in/chamod-gamage/" target = "_blank"><LinkedInIcon fontSize = "inherit"/></a>
+              <a className = "h0" href = "https://www.linkedin.com/in/chamod-gamage/" target = "_blank"><LinkedInIcon fontSize = "inherit"/></a>
               {"\u0020"}
-              <a href = "https://www.instagram.com/chamod.og/" target = "_blank"><InstagramIcon fontSize = "inherit"/></a>
+              <a className = "h0" href = "https://www.instagram.com/chamod.og/" target = "_blank"><InstagramIcon fontSize = "inherit"/></a>
               {"\u0020"}
-              <a href = "mailto: chamodgamage26@gmail.com" target = "_blank"><MailIcon fontSize = "inherit"/></a>
+              <a className = "h0" href = "mailto: chamodgamage26@gmail.com" target = "_blank"><MailIcon fontSize = "inherit"/></a>
               {"\u0020"}
               </Col>
               </h1>
@@ -387,7 +387,7 @@ export const Home = () => {
   const projects = [
     {
       title: "Employee Management System",
-      skills: ["Java", "Java"],
+      skills: ["Java"],
       image: ems,
       buttonText: "Take a look at the code on GitHub",
       link: "https://github.com/chamod-gamage/ems",
@@ -542,16 +542,16 @@ export const Home = () => {
         <h2>
         Made by  <mark>Chamod Gamage</mark>
       </h2>
-      <h1>
+      <h1 >
     
       {"\u0020"}
-      <a href = "https://github.com/chamod-gamage" target = "_blank"><GitHubIcon fontSize = "inherit"/></a>
+      <a className = "h0" href = "https://github.com/chamod-gamage" target = "_blank"><GitHubIcon fontSize = "inherit"/></a>
       {"\u0020"}
-      <a href = "https://www.linkedin.com/in/chamod-gamage/" target = "_blank"><LinkedInIcon fontSize = "inherit"/></a>
+      <a className = "h0" href = "https://www.linkedin.com/in/chamod-gamage/" target = "_blank"><LinkedInIcon fontSize = "inherit"/></a>
       {"\u0020"}
-      <a href = "https://www.instagram.com/chamod.og/" target = "_blank"><InstagramIcon fontSize = "inherit"/></a>
+      <a className = "h0" href = "https://www.instagram.com/chamod.og/" target = "_blank"><InstagramIcon fontSize = "inherit"/></a>
       {"\u0020"}
-      <a href = "mailto: chamodgamage26@gmail.com" target = "_blank"><MailIcon fontSize = "inherit"/></a>
+      <a className = "h0" href = "mailto: chamodgamage26@gmail.com" target = "_blank"><MailIcon fontSize = "inherit"/></a>
       {"\u0020"}
 
       </h1>

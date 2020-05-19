@@ -68,6 +68,21 @@ hNav :hover {
   color: white
 }
 
+.h0 {
+  
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 40;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  z-index: 0;
+}
+  .h0:hover {
+    color: #4a93ff;
+  }
+
+
 h1 {
   
   font-family: Raleway;
