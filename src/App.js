@@ -12,8 +12,9 @@ const App = () => {
     return (
       <React.Fragment>
         <Router>
-          <Route exact path = "/" component = {Home}/>
+          
           <Switch>
+            <Route exact path = "/" component = {Home}/>
             <Route path = '*' component = {Home}/>
           </Switch>
         </Router>
