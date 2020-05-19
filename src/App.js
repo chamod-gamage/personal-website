@@ -11,10 +11,13 @@ const App = () => {
   const [selected, setSelected] = useState(0)
     return (
       <React.Fragment>
-        {/* <Router>
+        <Router>
           <Route exact path = "/" component = {Home}/>
-        </Router> */}
-        <Home/>
+          <Switch>
+            <Route path = '*' component = {Home}/>
+          </Switch>
+        </Router>
+        {/* <Home/> */}
         {/* <NavigationBar setSelected = {setSelected}/>
           <Router>
             <Layout>
