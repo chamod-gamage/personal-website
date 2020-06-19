@@ -8,7 +8,7 @@ import {Layout} from './components/Layout.js'
 // const resume = require('./assets/chamod-resume.pdf')
 
 function initializeReactGA() {
-  ReactGA.initialize('UA-123791717-1');
+  ReactGA.initialize('UA-170137058-1');
   ReactGA.pageview('/homepage');
 }
 
