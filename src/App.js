@@ -1,11 +1,16 @@
 import React, {Component, useState} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import {Home} from './Home.js'
-
+import ReactGA from 'react-ga'
 import {NoMatch} from './NoMatch.js'
 import {Layout} from './components/Layout.js'
 // import {NavigationBar} from './Home.js'
 // const resume = require('./assets/chamod-resume.pdf')
+
+function initializeReactGA() {
+  ReactGA.initialize('UA-123791717-1');
+  ReactGA.pageview('/homepage');
+}
 
 const App = () => {
   const [selected, setSelected] = useState(0)
