@@ -8,7 +8,6 @@ import TabContainer from 'react-bootstrap/TabContainer'
 import TabContent from 'react-bootstrap/TabContent'
 import TabPane from 'react-bootstrap/TabPane'
 import Button from 'react-bootstrap/Button'
-
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
@@ -24,11 +23,10 @@ import MailIcon from '@material-ui/icons/Mail';
 import Slider from '@material-ui/core/Slider';
 import { withStyles, makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import {aboutRef, experienceRef, projectsRef} from './components/NavigationBar.js'
-
-
-
+import Ticker from 'react-ticker';
 // import Card from 'react-bootstrap/Card'
 import "./App.css"
+import Typical from 'react-typical'
 import { emphasize } from '@material-ui/core'
 // import {Nav, Navbar} from 'react-bootstrap'
 import KeyboardArrowDownOutlinedIcon from '@material-ui/icons/KeyboardArrowDownOutlined';
@@ -51,6 +49,7 @@ const trashemon = require('./assets/trashemon.png')
 
 
 
+
 export const Home = () => {
   const [idx, setIdx] = useState(0)
   const scrollToRef = (ref) =>
@@ -58,19 +57,29 @@ export const Home = () => {
   const EXPERIENCE = useRef(null)
   const PROJECTS = useRef(null)
   const ABOUT = useRef(null)
+  function rand(min, max) {
+    var offset = min
+    var range = (max - min) + 1
+    var randomNumber = Math.floor(Math.random() * range) + offset
+    return randomNumber
+  }
 
-  const Ticker = () => {
+  const Tickers = () => {
 
-    const roles = ["Full Stack Developer", "Designer", "Student", "Builder", "Leader", "Teacher", "Musician", "Explorer", "Creator"]
-    
+    const roles = ["Full Stack Developer", 1000, "Designer",1000, "Student",1000, "Builder",1000, "Leader", 1000,"Teacher",1000, "Musician",1000, "Explorer", 1000,"Creator",1000]
+    const interval = 3000; // The time to wait before rendering the next string
+    const typistProps = {} // Props that are passed to the react-typist component
+
     return(
-      <h3 onAnimationEnd = {() => {setIdx(idx+1); console.log(idx)}}>
-        {roles[idx % roles.length]}
-      </h3>
+      <Typical
+        steps = {roles}
+        loop = {Infinity}
+        wrapper = "h3"
+      />
     )
   }
   
-  const NavigationBar = (props) => { 
+  const NavigationBar = React.memo((props) => { 
     
 
     return(
@@ -111,9 +120,9 @@ export const Home = () => {
         </Navbar>
     {/*  </Styles> */}
     </Fragment>
-  )}
+  )})
 
-  const Name = () => {
+  const Name = React.memo(() => {
     return(
       <Fragment>
         <div style = {{border: "3px solid #e3e464", padding: 10, textAlign: "center"}}>
@@ -124,9 +133,9 @@ export const Home = () => {
         <div style = {{height: 10}}/>
       </Fragment>
      )
-  }
+  })
 
-  const HeaderCard = (props) => {
+  const HeaderCard = React.memo((props) => {
     return(
       <Card className = "minicard">
         <div style = {{height: 5}}/>
@@ -134,9 +143,9 @@ export const Home = () => {
         <div style = {{height: 5}}/>
       </Card>
     )
-  }
+  })
   
-  const Introduction = (props) => {
+  const Introduction = React.memo((props) => {
     return(
       <Container>
         <Row>
@@ -185,9 +194,9 @@ export const Home = () => {
       </Container>
     )  
 
-  }
+  })
 
-  const Job = (props) => {
+  const Job = React.memo((props) => {
     function markup() {
       return {__html: props.description };
     }
@@ -223,7 +232,7 @@ export const Home = () => {
      
       </Fragment>
     )
-  }
+  })
     
   const jobs = [
     {
@@ -282,7 +291,7 @@ export const Home = () => {
 
   ]
 
-  const Experience = () => {
+  const Experience = React.memo(() => {
     return(
       <Fragment>
       <HeaderCard title = {"Experience"}/> 
@@ -306,9 +315,9 @@ export const Home = () => {
       {/* </Card> */}
       </Fragment>
     )
-  }
+  })
 
-  const Project = (props) => {
+  const Project = React.memo((props) => {
     return (
       <Fragment>
       <Row>
@@ -352,9 +361,9 @@ export const Home = () => {
      
       </Fragment>
     )
-  }
+  })
 
-  const Projects = () => {
+  const Projects = React.memo(() => {
     return(
       <Fragment>
         <HeaderCard title = {"Projects"}/> 
@@ -382,7 +391,7 @@ export const Home = () => {
     })}
       </Fragment>
     )
-  }
+  })
   
   const projects = [
     {
@@ -434,7 +443,7 @@ export const Home = () => {
 
   ]
 
-  const Skills = (props) => {
+  const Skills = React.memo((props) => {
     return(
       <Fragment>
       <HeaderCard title = {"Skills"}/> 
@@ -460,7 +469,7 @@ export const Home = () => {
       {/* </Card> */}
       </Fragment>
     )
-  }
+  })
 
   
 
@@ -535,7 +544,7 @@ export const Home = () => {
     return `${value}B`;
   }
 
-  const Footer = () => {
+  const Footer = React.memo(() => {
 
     return(
       <Fragment>
@@ -558,7 +567,7 @@ export const Home = () => {
       </Fragment>
       
     )
-  }
+  })
     return(
 
         <div>
@@ -570,7 +579,7 @@ export const Home = () => {
                 <div id = "about"/>
                     <Name/>
                     
-                    <Ticker/>
+                    <Tickers/>
                                       
                 </header>
                 

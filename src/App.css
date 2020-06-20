@@ -112,12 +112,12 @@ h3 {
   color: white; 
   font-size: 25; 
   line-height: 1.2;
-  opacity: 0; 
-  animation: SubAnimation; 
+  /* opacity: 0;  */
+  /* animation: SubAnimation; 
   animation-duration: 1.8s;
   animation-delay: 0s;
   animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1); */
 }
 
 .projects {
