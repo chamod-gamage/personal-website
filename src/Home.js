@@ -2,53 +2,29 @@ import React, {useState, useEffect, Fragment, useRef} from 'react'
 import {Container, Nav, Navbar} from 'react-bootstrap'
 import {Layout} from "./components/Layout"
 import Jumbotron from 'react-bootstrap/Jumbotron'
-import Tabs from 'react-bootstrap/Tabs'
-import Tab from 'react-bootstrap/Tab'
-import TabContainer from 'react-bootstrap/TabContainer'
-import TabContent from 'react-bootstrap/TabContent'
-import TabPane from 'react-bootstrap/TabPane'
-import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Image from 'react-bootstrap/Image'
-import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
-import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
-import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
-import { Frame } from "framer";
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import MailIcon from '@material-ui/icons/Mail';
 import Slider from '@material-ui/core/Slider';
-import { withStyles, makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import {aboutRef, experienceRef, projectsRef} from './components/NavigationBar.js'
-import Ticker from 'react-ticker';
-// import Card from 'react-bootstrap/Card'
+import { withStyles } from '@material-ui/core/styles';
 import "./App.css"
 import Typical from 'react-typical'
-import { emphasize } from '@material-ui/core'
-// import {Nav, Navbar} from 'react-bootstrap'
 import KeyboardArrowDownOutlinedIcon from '@material-ui/icons/KeyboardArrowDownOutlined';
-import styled from 'styled-components'
+
 const logo = require("./assets/me.jpg")
 const resume = require('./assets/chamod-resume.pdf')
-
-
-var scrollToElement = require('scroll-to-element');
- 
+var scrollToElement = require('scroll-to-element'); 
 scrollToElement('#id');
 const ems = require("./assets/ems.png")
 const website =  require("./assets/website.png")
 const me = require("./assets/me.jpg")
 const pygame = require('./assets/pygame.png')
-
 const trashemon = require('./assets/trashemon.png')
-
-
-
-
-
 
 export const Home = () => {
   const [idx, setIdx] = useState(0)
@@ -57,12 +33,7 @@ export const Home = () => {
   const EXPERIENCE = useRef(null)
   const PROJECTS = useRef(null)
   const ABOUT = useRef(null)
-  function rand(min, max) {
-    var offset = min
-    var range = (max - min) + 1
-    var randomNumber = Math.floor(Math.random() * range) + offset
-    return randomNumber
-  }
+  
 
   const Tickers = () => {
 
@@ -81,7 +52,6 @@ export const Home = () => {
   
   const NavigationBar = React.memo((props) => { 
     
-
     return(
     
     <Fragment>
@@ -600,11 +570,7 @@ export const Home = () => {
                   <div style = {{height: 100}}/>
                   <Footer/>
                 </Layout>
-            </Jumbotron>
-        
-
-            
-            
+            </Jumbotron>            
         </div>
     )
 }
