@@ -2,10 +2,6 @@ import React, {Component, useState, useEffect} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import {Home} from './Home.js'
 import ReactGA from 'react-ga'
-import {NoMatch} from './NoMatch.js'
-import {Layout} from './components/Layout.js'
-// import {NavigationBar} from './Home.js'
-// const resume = require('./assets/chamod-resume.pdf')
 
 
 const App = () => {
