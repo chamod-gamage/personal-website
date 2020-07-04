@@ -25,6 +25,7 @@ const website =  require("./assets/website.png")
 const me = require("./assets/me.jpg")
 const pygame = require('./assets/pygame.png')
 const trashemon = require('./assets/trashemon.png')
+const cooking = require('./assets/home-cooking.png')
 
 export const Home = () => {
   const [idx, setIdx] = useState(0)
@@ -364,6 +365,16 @@ export const Home = () => {
   })
   
   const projects = [
+    {
+      title: "Home Cooking!",
+      skills: ["React.js", "HTML", "CSS"],
+      image: cooking,
+      buttonText: "Visit the website",
+      link: "https://home-cooking.netlify.app",
+      description: `This is a web app I initially made for my mom so that she could better keep track of the stuff she was cooking while stuck in quarantine. Now, I've made it publicly accessible for
+      anyone to use - just visit the website and you can start making your logbook of recipes. The web app leverages various React libraries for the clean user interface and I utilized localStorage in the 
+      browser so that the web app stores a user's data over time. The React Context API was especially useful for this project due to needing effective state management while handling data across several components.`
+    },
     {
       title: "Employee Management System",
       skills: ["Java"],
