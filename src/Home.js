@@ -132,7 +132,7 @@ export const Home = () => {
             <intro>
               Hi! I'm Chamod. I'm a Systems Design Engineering student at the University of Waterloo passionate about tech
               and using it to improve the lives of people. When I'm not busy bringing my ideas to life or developing new skills, 
-              you can catch me on my bike outside or scrolling through r/NBA. <br/><br/><em>I'm currently looking for Fall 2020 internships in software development or product management!</em>
+              you can catch me on my bike outside or scrolling through r/NBA. <br/><br/><em>I'm currently looking for Summer 2021 internships in software development or product management!</em>
             </intro>
             </Row>
             <br/>
