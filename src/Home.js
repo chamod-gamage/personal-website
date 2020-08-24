@@ -26,7 +26,7 @@ const me = require("./assets/me.jpg")
 const pygame = require('./assets/pygame.png')
 const trashemon = require('./assets/trashemon.png')
 const cooking = require('./assets/home-cooking.png')
-const cooking = require('./assets/stock.png')
+const stock = require('./assets/stock.png')
 
 export const Home = () => {
   const [idx, setIdx] = useState(0)
