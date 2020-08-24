@@ -26,6 +26,7 @@ const me = require("./assets/me.jpg")
 const pygame = require('./assets/pygame.png')
 const trashemon = require('./assets/trashemon.png')
 const cooking = require('./assets/home-cooking.png')
+const cooking = require('./assets/stock.png')
 
 export const Home = () => {
   const [idx, setIdx] = useState(0)
@@ -365,6 +366,16 @@ export const Home = () => {
   })
   
   const projects = [
+    {
+      title: "Stocksimple",
+      skills: ["React.js", "HTML", "CSS"],
+      image: stock,
+      buttonText: "Visit the web app",
+      link: "https://stocksimple.netlify.app",
+      description: `This is a web application I made to track my stock portfolio easily from my computer. 
+      It's been coded in React and uses the Tradier Developer API to get real-time and historic market data.
+      I've made it easy to use for anyone who wants to track their portfolio, utilizing localstorage for long-term data storage.`
+    },
     {
       title: "Home Cooking!",
       skills: ["React.js", "HTML", "CSS"],
