@@ -15,27 +15,11 @@ const App = () => {
     return (
       <React.Fragment>
         <Router>
-          
           <Switch>
             <Route exact path = "/" component = {Home}/>
             <Route path = '*' component = {Home}/>
           </Switch>
         </Router>
-        {/* <Home/> */}
-        {/* <NavigationBar setSelected = {setSelected}/>
-          <Router>
-            <Layout>
-              <Switch>
-                <Route exact path = "/about" component = {About} />
-                <Route exact path = "/contact" component = {Contact} />
-                <Route exact path = "/services" component = {Services} />
-                <Route exact path = "/resume" component = {resume}></Route>
-              </Switch>
-            </Layout>
-            <Switch>
-              <Route exact path= "/" component = {Home}/>
-            </Switch>
-          </Router> */}
         
       </React.Fragment>
     );

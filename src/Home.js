@@ -205,11 +205,25 @@ export const Home = () => {
       </Fragment>
     )
   })
-    
+  //to add: <br/><li>Developed unit testing framework using Jest and Enzyme to ensure robustness in applications and speed up development process by 30%</li>
   const jobs = [
     {
+      title: "Software Developer @",
+      date: "Aug 2020 - Present",
+      company: "FutureFit AI",
+      description: 
+        `<br/>FutureFit AI is a company which places an AI-powered career GPS into the hands of workers allowing them to make faster, smarter, and more successful career transitions in the age of disruption and automation. 
+         I'm currently a full stack software developer in a period where this platform is rapidly scaling to meet the needs of our clients. Here are some of my accomplishments so far:
+         <br/><br/>
+         <ul><li>Developed coaching interface for career coaches in the Canadian Council for Youth Prosperity (CCYP), enabling the management of thousands of Canadian youth requiring assistance with employment</li>
+         <br/><li>Managed relationship with CCYP, translating their business requirements into technical solutions, reincoporating their feedback into the iterative design process, and communicated platform that I developed via a demo video and a live walkthrough training session with coaches</li>
+          <br/><li>Assisted in the consolidation of multiple instances of platform data into a single data architecture, enabling stronger machine learning analytics now and into the future</li>
+          </ul>`,
+      skills: ["React.js", "Node.js", "PostgreSQL", "Knex.js", "Redux", "Express.js", "HTML", "CSS", "AWS", "Unit Testing", "Sprint Planning", "User Research", "Client Management"]
+    },
+    {
       title: "Junior DevOps Developer @",
-      date: "May 2020 - Present",
+      date: "May 2020 - Aug 2020",
       company: "Honeybee Hub Inc.",
       description: 
         `<br/>Honeybee Hub is a digital marketplace startup connecting researchers and research study
@@ -225,7 +239,7 @@ export const Home = () => {
     },
     {
       title: "Full Stack Web Developer (Co-op) @",
-      date: "Jan 2020 - Apr 2020",
+      date: "Jan 2020 - May 2020",
       company: "Honeybee Hub Inc.",
       description: `<br/>Before my role in DevOps at Honeybee, I was a Full Stack Web Developer. This was my first full-time position as a developer and I was certainly thrown for a spin at the beginning trying to acclimate myself to the fast-paced environment of a startup. However, I soon acclimated and was given the independence, advisement, and responsibility to tackle some hefty pursuits during my time. Here's just a few of the things I accomplished over my time:
       <br/><br/>
