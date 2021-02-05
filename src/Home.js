@@ -10,6 +10,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import MailIcon from "@material-ui/icons/Mail";
+import LinkIcon from "@material-ui/icons/Link";
 import Slider from "@material-ui/core/Slider";
 import { withStyles } from "@material-ui/core/styles";
 import "./App.css";
@@ -267,8 +268,15 @@ export const Home = () => {
             </div>
           </Col>
           <Col>
-            <div className="job">{props.company}</div>
+            <div className="job">
+              {props.link.length ? (
+                <a href={props.link}>{props.company}</a>
+              ) : (
+                props.company
+              )}
+            </div>
           </Col>
+
           <Col
             md="auto"
             style={{ marginRight: 0, paddingRight: 5, marginLeft: "auto" }}
@@ -297,18 +305,29 @@ export const Home = () => {
   //to add: <br/><li>Developed unit testing framework using Jest and Enzyme to ensure robustness in applications and speed up development process by 30%</li>
   const jobs = [
     {
-      title: "Software Developer @",
+      title: "Full Stack Project Developer @",
       date: "Jan 2021 - Present",
       company: "UW Blueprint",
-      description: `<br/>While on my academic term, I am a software developer for UW Blueprint, an organization which pairs me with non-profits to create technological solutions pro bono.<br/><br/>
-      As a software developer, I will be working as a member of a 10 person team, making core contributions to a software product which will assist a chosen non-profit in their mission as well as strengthen my skills as a software developer.
+      link: "https://uwblueprint.org/",
+      description: `Something I will always value as an engineering student is giving back to the community using my technical skillset. <br/>While on my academic term, I've found the perfect opportunity to do that as a software developer with UW Blueprint, an organization which pairs talented students with non-profits to create technological solutions pro bono.<br/><br/>
+      I'm currently a Full Stack Project Developer working with <a href="https://pregnancycentre.ca/" target = "_blank"><mark>The Pregnancy Centre</mark></a> to build a web application facilitating donations to and donation requests,
+      remediating pain points - serving staff, donors, and most importantly, young mothers & children in need.
          `,
-      skills: ["React.js", "Node.js", "Python", "Flask", "SQL", "SQLAlchemy"],
+      skills: [
+        "React.js",
+        "Node.js",
+        "GraphQL",
+        "Apollo",
+        "Python",
+        "Flask",
+        "MongoDB",
+      ],
     },
     {
       title: "Software Developer @",
       date: "Aug 2020 - Dec 2020",
       company: "FutureFit AI",
+      link: "https://futurefit.ai/",
       description: `<br/>FutureFit AI is a company which places an AI-powered career GPS into the hands of workers allowing them to make faster, smarter, and more successful career transitions in the age of disruption and automation. 
          I'm currently a full stack software developer in a period where this platform is rapidly scaling to meet the needs of our clients. Here are some of my accomplishments so far:
          <br/><br/>
@@ -336,6 +355,7 @@ export const Home = () => {
       title: "Junior DevOps Developer @",
       date: "May 2020 - Aug 2020",
       company: "Honeybee Hub Inc.",
+      link: "https://covid19.honeybeehub.io/",
       description: `<br/>Honeybee Hub is a digital marketplace startup connecting researchers and research study
          participants. In recent times, we've been assisting in the battle against COVID-19 by 
          connecting participants to dozens of COVID-19 studies hosted on a <a href = https://covid19.honeybeehub.io/ target = "_blank"><mark>separate platform</mark></a>.
@@ -351,6 +371,7 @@ export const Home = () => {
       title: "Full Stack Web Developer (Co-op) @",
       date: "Jan 2020 - May 2020",
       company: "Honeybee Hub Inc.",
+      link: "https://honeybeehub.io/",
       description: `<br/>Before my role in DevOps at Honeybee, I was a Full Stack Web Developer. This was my first full-time position as a developer and I was certainly thrown for a spin at the beginning trying to acclimate myself to the fast-paced environment of a startup. However, I soon acclimated and was given the independence, advisement, and responsibility to tackle some hefty pursuits during my time. Here's just a few of the things I accomplished over my time:
       <br/><br/>
       <ul><li>Redeveloped the <a href = "https://www.honeybeehub.io" target = "_blank"><mark>landing page</mark></a> to increase user discovery & retention, reducing bounce rate from 60% to 10% </li>
@@ -373,6 +394,7 @@ export const Home = () => {
       title: "Lead Mechanical Executive @",
       date: "Sep 2015 - Jun 2019",
       company: "Absolute Robotics",
+      link: "http://team4308.ca/pastSeasons.html",
       description: `<br/>Throughout my time in high school, I was an integral part of Absolute Robotics, my FRC team, an experience very similar to working in a professional engineering environment. During this time, I saw my team grow from a relatively average FRC team to a tightly-knit well-oiled machine capped off by our semifinalist position at the 2018 World Championships (losing to the champions). 
       <br/>As Mechanical Executive, I was really a jack-of-all-trades. Primarily, I was focused on the preliminary designs, prototypes, and final construction of the competition robot. However, I also had to train junior members up and raise thousands of dollars in funds by pitching to sponsors prior to the build season, manage a hectic 6-week build season by delegating roles and planning workflows effectively 
       within my large subteam of >60 members, and finally, coordinate with my fellow executives and assist them with their roles (such as coding autonomous functionality for our robot). All in all, my time in FRC was the launchpad for my career in STEM. <br/><br/>`,
@@ -414,6 +436,7 @@ export const Home = () => {
         {jobs.map((job) => {
           return (
             <Job
+              link={job.link || ""}
               title={job.title}
               company={job.company}
               description={job.description}
@@ -607,6 +630,8 @@ export const Home = () => {
     "React.js",
     "React Native",
     "React Redux",
+    "GraphQL",
+    "Apollo",
     "Express.js",
     "Node.js",
     "Knex.js",
