@@ -238,7 +238,7 @@ export const Home = () => {
                   marks={[{ label: '2B', value: 4 }]}
                   step={null}
                   aria-label="Chamod is currently in his 2B term. Also, this website will be made fully accessible in the future."
-                  defaultValue={3}
+                  defaultValue={4}
                 />
                 {/* </Row> */}
                 <h2 style={{ float: 'right', marginTop: -5 }}>SYDE Progress</h2>
