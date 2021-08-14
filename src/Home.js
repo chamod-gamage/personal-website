@@ -576,14 +576,43 @@ export const Home = () => {
 
   const projects = [
     {
+      title: 'The Pregnancy Centre Donation Hub',
+      skills: [
+        'React.js',
+        'HTML',
+        'SCSS',
+        'Node.js',
+        'MongoDB',
+        'GraphQL',
+        'Firebase',
+      ],
+      image: stock,
+      buttonText: 'Visit the (real) donation hub',
+      link: 'https://donationhub.pregnancycentre.ca/',
+      description: `As a member of UW Blueprint, I (with fellow developers) built a full stack technical solution to the pain points faced by the Kitchener-Waterloo based NPO The Pregnancy Centre regading donation management. 
+      This is a donation hub which allows the public to see what items the Centre needs in terms of donations and make requests to donate, while also allowing employees to manage donation requests & listings.
+      The tech stack used for this project was the MERN stack, with Firebase for user authentication and asset hosting (which were some of the features that I personally owned). 
+      Ultimately, this hub will save busy staff countless hours and support many young mothers in need.`,
+    },
+    {
       title: 'Stocksimple',
-      skills: ['React.js', 'HTML', 'CSS'],
+      skills: [
+        'React.js',
+        'HTML',
+        'SCSS',
+        'Node.js',
+        'MongoDB',
+        'Bcrypt',
+        'Docker',
+        'Docker-Compose',
+      ],
       image: stock,
       buttonText: 'Visit the web app',
       link: 'https://stocksimple.netlify.app',
-      description: `This is a web application I made to track my stock portfolio easily from my computer. 
+      description: `This is a pair of web applications (SPA and API) I made to track my stock portfolio easily from my computer. 
       It's been coded in React and uses the Tradier Developer API to get real-time and historic market data.
-      I've made it easy to use for anyone who wants to track their portfolio, utilizing localstorage for long-term data storage.`,
+      I've made it easy to use for anyone who wants to track their portfolio, utilizing localstorage for long-term data storage on-device or (if the user creates an account) MongoDB by way of a Node.js server.
+      Deployments were done on Netlify and Heroku, with a database hosted on MongoDB Atlas. The apps have been containerized using Docker with a docker-compose for easy local development.`,
     },
     {
       title: 'Home Cooking!',
