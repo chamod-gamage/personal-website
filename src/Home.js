@@ -28,6 +28,7 @@ const pygame = require('./assets/pygame.png');
 const trashemon = require('./assets/trashemon.png');
 const cooking = require('./assets/home-cooking.png');
 const stock = require('./assets/stock.png');
+const tpc = require('./assets/tpc.png');
 
 export const Home = () => {
   const [idx, setIdx] = useState(0);
@@ -586,7 +587,7 @@ export const Home = () => {
         'GraphQL',
         'Firebase',
       ],
-      image: stock,
+      image: tpc,
       buttonText: 'Visit the (real) donation hub',
       link: 'https://donationhub.pregnancycentre.ca/',
       description: `As a member of UW Blueprint, I (with fellow developers) built a full stack technical solution to the pain points faced by the Kitchener-Waterloo based NPO The Pregnancy Centre regading donation management. 
