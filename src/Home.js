@@ -29,6 +29,7 @@ const trashemon = require("./assets/trashemon.png");
 const cooking = require("./assets/home-cooking.png");
 const stock = require("./assets/stock.png");
 const tpc = require("./assets/tpc.png");
+const uwcribs = require("./assets/uwcribs.gif");
 
 export const Home = () => {
   const [idx, setIdx] = useState(0);
@@ -606,6 +607,23 @@ export const Home = () => {
   });
 
   const projects = [
+    {
+      title: "UW Cribs",
+      skills: [
+        "Turborepo",
+        "Next.js",
+        "Node.js",
+        "MongoDB",
+        "Retool",
+        "GraphQL",
+        "TailwindCSS",
+      ],
+      image: uwcribs,
+      buttonText: "Use the product",
+      link: "https://donationhub.pregnancycentre.ca/",
+      description: `Finding housing every term is a universally lamented experience amongst post-secondary students, due to the disjointed, time-consuming, and uncurated nature of the process. UW Cribs sources posts from sellers on commonly used platforms like Facebook Marketplace and provides them to users in a centralized user interface, with filtering functionality, allowing students to curate posts based on relevant data categories such as budget, bedrooms, bathrooms, and season.
+      The project includes a Turborepo monorepo consisting of two Node.js servers and a Next.js web application written in TypeScript, internal tooling built in Retool, and a MongoDB database.`,
+    },
     {
       title: "The Pregnancy Centre Donation Hub",
       skills: [
