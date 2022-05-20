@@ -663,61 +663,61 @@ export const Home = () => {
       I've made it easy to use for anyone who wants to track their portfolio, utilizing localstorage for long-term data storage on-device or (if the user creates an account) MongoDB by way of a Node.js server.
       Deployments were done on Netlify and Heroku, with a database hosted on MongoDB Atlas. The apps have been containerized using Docker with a docker-compose for easy local development.`,
     },
-    {
-      title: "Home Cooking!",
-      skills: ["React.js", "HTML", "CSS"],
-      image: cooking,
-      buttonText: "Visit the website",
-      link: "https://home-cooking.netlify.app",
-      description: `This is a web app I initially made for my mom so that she could better keep track of the stuff she was cooking while stuck in quarantine. Now, I've made it publicly accessible for
-      anyone to use - just visit the website and you can start making your logbook of recipes. The web app leverages various React libraries for the clean user interface and I utilized localStorage in the 
-      browser so that the web app stores a user's data over time. The React Context API was especially useful for this project due to needing effective state management while handling data across several components.`,
-    },
-    {
-      title: "Employee Management System",
-      skills: ["Java"],
-      image: ems,
-      buttonText: "Take a look at the code on GitHub",
-      link: "https://github.com/chamod-gamage/ems",
-      description: `Initially a simple computer science exercise to learn about hash tables, the Employee Management System (EMS) is a fully functional Java application developed in NetBeans which 
-      allows users to manage a company's employees. Users are provided with password functionality, long-term storage of data, simple payroll functionality, and CRUD operations for both employees
-       and their work locations. This project was built completely from scratch - 
-      this project was foundational in developing my understanding of Object-Oriented Programming.`,
-    },
-    {
-      title: "Personal Website",
-      skills: ["React.js", "HTML", "CSS", "Keyframes"],
-      image: website,
-      buttonText: "Take a look at the code on GitHub",
-      link: "https://github.com/chamod-gamage/personal-website",
-      description: `This is actually the second major iteration of my personal website. While my initial version was a hodgepodge of HTML and CSS and contained somewhat hacky code, 
-      this version is much sleeker, responsive, aesthetically pleasing, and easy to modify. I developed this website using the skills I gained in React.js over my first co-op term 
-      in addition to the HTML and CSS skills I had acquired over time beforehand, as well as a new skill I developed - CSS animations! This website is the best way to present myself
-       in a more relaxed format and lets my personality come through. It's constantly under construction and is getting more and more interactive. `,
-    },
-    {
-      title: "PygamePaint",
-      skills: ["Python"],
-      image: pygame,
-      buttonText: "Take a look at the code on GitHub",
-      link: "https://github.com/chamod-gamage/pygamePAINT",
-      description: `Pygame Paint was one of my first forays into the world of programming. Built in Pygame, 
-      this simple program provides a simple alternative to other drawing applications, providing easy-to-follow
-       instructions and versatility in illustration. With much room to improve, this program is definitely not
-        without its flaws. However, I still look back fondly on it and like to show 
-      it to demonstrate how far I have come in my journey in tech.`,
-    },
-    {
-      title: "Trashemon Go",
-      skills: ["React Native", "Node.js", "Firebase"],
-      image: trashemon,
-      buttonText: "Take a look at this project on Devpost",
-      link: "https://devpost.com/software/trashemon-go-3jomhr",
-      description: `Trashemon Go is a mobile app that gamifies the upcycling/recycling of trash in your neighbourhood inspired by the star app of summer 2016 - Pokemon Go. The app was
-       developed by me and a few classmates. We were very ambitious in trying to combine many different features in a short period of time, including Google Cloud Vision API (using ML
-         to identify trash from visual images), Twilio Chat API (to create chat rooms for users to interact), as well as the user experience features required to make an effective app. 
-         Personally, I planned out the overall software architecture that would allow all these features to work together and the React Native frontend as well.`,
-    },
+    // {
+    //   title: "Home Cooking!",
+    //   skills: ["React.js", "HTML", "CSS"],
+    //   image: cooking,
+    //   buttonText: "Visit the website",
+    //   link: "https://home-cooking.netlify.app",
+    //   description: `This is a web app I initially made for my mom so that she could better keep track of the stuff she was cooking while stuck in quarantine. Now, I've made it publicly accessible for
+    //   anyone to use - just visit the website and you can start making your logbook of recipes. The web app leverages various React libraries for the clean user interface and I utilized localStorage in the
+    //   browser so that the web app stores a user's data over time. The React Context API was especially useful for this project due to needing effective state management while handling data across several components.`,
+    // },
+    // {
+    //   title: "Employee Management System",
+    //   skills: ["Java"],
+    //   image: ems,
+    //   buttonText: "Take a look at the code on GitHub",
+    //   link: "https://github.com/chamod-gamage/ems",
+    //   description: `Initially a simple computer science exercise in high school to learn about hash tables, the Employee Management System (EMS) is a fully functional Java application developed in NetBeans which
+    //   allows users to manage a company's employees. Users are provided with password functionality, long-term storage of data, simple payroll functionality, and CRUD operations for both employees
+    //    and their work locations. This project was built completely from scratch -
+    //   this project was foundational in developing my understanding of Object-Oriented Programming.`,
+    // },
+    // {
+    //   title: "Personal Website",
+    //   skills: ["React.js", "HTML", "CSS", "Keyframes"],
+    //   image: website,
+    //   buttonText: "Take a look at the code on GitHub",
+    //   link: "https://github.com/chamod-gamage/personal-website",
+    //   description: `This is actually the second major iteration of my personal website. While my initial version was a hodgepodge of HTML and CSS and contained somewhat hacky code,
+    //   this version is much sleeker, responsive, aesthetically pleasing, and easy to modify. I developed this website using the skills I gained in React.js over my first co-op term
+    //   in addition to the HTML and CSS skills I had acquired over time beforehand, as well as a new skill I developed - CSS animations! This website is the best way to present myself
+    //    in a more relaxed format and lets my personality come through. It's constantly under construction and is getting more and more interactive. `,
+    // },
+    // {
+    //   title: "PygamePaint",
+    //   skills: ["Python"],
+    //   image: pygame,
+    //   buttonText: "Take a look at the code on GitHub",
+    //   link: "https://github.com/chamod-gamage/pygamePAINT",
+    //   description: `Pygame Paint was one of my first forays into the world of programming. Built in Pygame,
+    //   this simple program provides a simple alternative to other drawing applications, providing easy-to-follow
+    //    instructions and versatility in illustration. With much room to improve, this program is definitely not
+    //     without its flaws. However, I still look back fondly on it and like to show
+    //   it to demonstrate how far I have come in my journey in tech.`,
+    // },
+    // {
+    //   title: "Trashemon Go",
+    //   skills: ["React Native", "Node.js", "Firebase"],
+    //   image: trashemon,
+    //   buttonText: "Take a look at this project on Devpost",
+    //   link: "https://devpost.com/software/trashemon-go-3jomhr",
+    //   description: `Trashemon Go is a mobile app that gamifies the upcycling/recycling of trash in your neighbourhood inspired by the star app of summer 2016 - Pokemon Go. The app was
+    //    developed by me and a few classmates. We were very ambitious in trying to combine many different features in a short period of time, including Google Cloud Vision API (using ML
+    //      to identify trash from visual images), Twilio Chat API (to create chat rooms for users to interact), as well as the user experience features required to make an effective app.
+    //      Personally, I planned out the overall software architecture that would allow all these features to work together and the React Native frontend as well.`,
+    // },
   ];
 
   const Skills = React.memo((props) => {
