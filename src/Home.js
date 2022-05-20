@@ -288,6 +288,15 @@ export const Home = () => {
             <div className="date">{props.date}</div>
           </Col>
         </Row>
+
+        <div
+          style={{
+            backgroundColor: "#4a93ff",
+            height: 1,
+            marginRight: -5,
+            marginTop: 3,
+          }}
+        />
         <Row>
           <Col>
             <div dangerouslySetInnerHTML={markup()} className="describe" />
@@ -517,14 +526,16 @@ export const Home = () => {
         {/* <Container style = {{padding: "5%"}}> */}
         {jobs.map((job) => {
           return (
-            <Job
-              link={job.link || ""}
-              title={job.title}
-              company={job.company}
-              description={job.description}
-              date={job.date}
-              skills={job.skills ? job.skills : "None"}
-            />
+            <>
+              <Job
+                link={job.link || ""}
+                title={job.title}
+                company={job.company}
+                description={job.description}
+                date={job.date}
+                skills={job.skills ? job.skills : "None"}
+              />
+            </>
           );
         })}
         {/* <div style = {{height: 100}}/> */}
