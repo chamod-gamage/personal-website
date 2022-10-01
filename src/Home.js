@@ -184,15 +184,16 @@ export const Home = () => {
           <Col lg={9}>
             <Row style={{ textAlign: "left", paddingTop: 0 }}>
               <intro>
-                Hi! I'm Chamod. I'm a Systems Design Engineering student at the
-                University of Waterloo passionate about tech and using it to
-                improve the lives of people. When I'm not busy bringing my ideas
-                to life or developing new skills, you can catch me on my bike
-                outside or scrolling through r/NBA. <br />
+                Hi! I'm Chamod. I'm a 7x tech intern with over 2 years of
+                experience and a passion for building impactful user-facing
+                products. I love exploring interesting problem spaces and using
+                my skills to make a difference. Currently, I'm in my final year
+                of studying Systems Design Engineering at the University of
+                Waterloo. <br />
                 <br />
                 <em>
-                  I'm currently looking for Fall 2022 internships in software
-                  development!
+                  I'm currently looking for Summer 2023 Software Engineering
+                  internships.
                 </em>
               </intro>
             </Row>
@@ -240,9 +241,9 @@ export const Home = () => {
                   max={8}
                   getAriaValueText={valuetext}
                   valueLabelDisplay="off"
-                  marks={[{ label: "3A", value: 5 }]}
+                  marks={[{ label: "3B", value: 6 }]}
                   step={null}
-                  aria-label="Chamod is currently in his 3A term. Also, this website will be made fully accessible in the future."
+                  aria-label="Chamod is currently in his 3B term. Also, this website will be made fully accessible in the future."
                   defaultValue={5}
                 />
                 {/* </Row> */}
@@ -252,7 +253,7 @@ export const Home = () => {
         </Row>
         <br />
         <intro style={{ float: "right", marginTop: -5 }}>
-          Dean's List Streak 🔥🔥🔥🔥 | 3.99 GPA 📚
+          Dean's List Streak 🔥🔥🔥🔥🔥 | 3.99 GPA 📚
         </intro>
       </Container>
     );
@@ -319,7 +320,18 @@ export const Home = () => {
   const jobs = [
     {
       title: "Software Engineering Intern @",
-      date: "Jan 2022 - Present",
+      date: "Sep 2022 - Dec 2022",
+      company: "Modern Treasury",
+      link: "https://www.moderntreasury.com/",
+      description: `
+        I'm building and maintaining product features for an API + web application platform facilitating the movement of billions of dollars for hundreds of rapid growth startups and enterprises.
+        Reconciling over $5B in transactions per month, Modern Treasury is the leading treasury management platform for startups and enterprises.
+        `,
+      skills: ["React.js", "Ruby", "Rails", "PostgreSQL"],
+    },
+    {
+      title: "Product Engineering Intern @",
+      date: "Jan 2022 - Apr 2022",
       company: "On Deck",
       link: "https://www.beondeck.com/",
       description: `
