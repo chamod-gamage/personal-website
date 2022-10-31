@@ -30,6 +30,7 @@ const cooking = require("./assets/home-cooking.png");
 const stock = require("./assets/stock.png");
 const tpc = require("./assets/tpc.png");
 const uwcribs = require("./assets/uwcribs.gif");
+const panda = require("./assets/panda.gif");
 
 export const Home = () => {
   const [idx, setIdx] = useState(0);
@@ -170,13 +171,14 @@ export const Home = () => {
     );
   });
 
-  const Introduction = React.memo((props) => {
+  const Introduction = (props) => {
+    const [clicks, setClicks] = useState(0);
     return (
       <Container>
         <Row>
           <Col lg={3} style={{ textAlign: "center" }}>
             <div style={{ height: 20 }} />
-            <Image src={me} className="profile" roundedCircle />
+            <Image src={clicks >= 10 ? panda : me} className="profile" onClick={() => { setClicks(clicks + 1) }} roundedCircle />
             <div style={{ height: 10 }} />
           </Col>
           {/* <Col md = {1}/> */}
@@ -257,7 +259,7 @@ export const Home = () => {
         </intro>
       </Container>
     );
-  });
+  };
 
   const Job = React.memo((props) => {
     function markup() {
@@ -386,7 +388,7 @@ export const Home = () => {
       date: "May 2021 - Aug 2021",
       company: "LCBO|next",
       link: "https://www.lcbonext.com/",
-      description: `LCBO|next is a corporate innovation lab serving the Liquor Control Board of Ontario, the Crown Corporation solely responsible for alcohol sales + distribution in Ontario. <br/> 
+      description: `LCBO|next is a corporate innovation lab serving the Liquor Control Board of Ontario, the Crown Corporation solely responsible for alcohol sales + distribution in Ontario. <br/>
       At this lab, I've gotten to work as part of an agile team, providing innovative technical solutions to problem spaces faced by internal and external stakeholders of the LCBO. Projects we've built during my term include: <br/>
       <ul>
         <br/><li><strong>Grocery Claims Portal</strong>: An API + pair of web applications built using React, Node.js, TypeORM, and PostgreSQL which facilitate the process of allowing grocery stores to make claims on imperfectly delivered alcohol (shortages, damage, expired goods, etc.)</li>
@@ -414,7 +416,7 @@ export const Home = () => {
       link: "https://uwblueprint.org/",
       description: `Prior to my position as a Product Manager, while on my academic term, I had the perfect opportunity to do give back to the community as a software developer with UW Blueprint.<br/><br/>
       I was a Full Stack Project Developer working with <a href="https://pregnancycentre.ca/" target = "_blank"><mark>The Pregnancy Centre</mark></a> to build a web application facilitating donations to and donation requests,
-      remediating pain points - serving staff, donors, and most importantly, young mothers & children in need. 
+      remediating pain points - serving staff, donors, and most importantly, young mothers & children in need.
          `,
       skills: [
         "React.js",
@@ -432,7 +434,7 @@ export const Home = () => {
       date: "Aug 2020 - Dec 2020",
       company: "FutureFit AI",
       link: "https://futurefit.ai/",
-      description: `<br/>FutureFit AI is a company which places an AI-powered career GPS into the hands of workers allowing them to make faster, smarter, and more successful career transitions in the age of disruption and automation. 
+      description: `<br/>FutureFit AI is a company which places an AI-powered career GPS into the hands of workers allowing them to make faster, smarter, and more successful career transitions in the age of disruption and automation.
          I was a full stack software developer in a period where the platform was rapidly scaling to meet the needs of clients. Here are some of my accomplishments:
          <br/><br/>
          <ul><li>Developed coaching interface for career coaches in the Canadian Council for Youth Prosperity (CCYP), enabling the management of thousands of Canadian youth requiring assistance with employment</li>
@@ -461,7 +463,7 @@ export const Home = () => {
       company: "Honeybee Hub Inc.",
       link: "https://honeybeehub.io/",
       description: `
-         My role as a DevOps Developer allowed me to contribute to the team in 
+         My role as a DevOps Developer allowed me to contribute to the team in
          a new area. Here are some highlights of my achievements:
          <br/><br/>
          <ul><li>Containerized applications using Docker and deployed them to Azure (and then eventually Google Kubernetes Engine) in order to ensure more efficient usage of software resources </li>
@@ -661,9 +663,9 @@ export const Home = () => {
       image: tpc,
       buttonText: "Visit the (real) donation hub",
       link: "https://donationhub.pregnancycentre.ca/",
-      description: `As a member of UW Blueprint, I (with fellow developers) built a full stack technical solution to the pain points faced by the Kitchener-Waterloo based NPO The Pregnancy Centre regading donation management. 
+      description: `As a member of UW Blueprint, I (with fellow developers) built a full stack technical solution to the pain points faced by the Kitchener-Waterloo based NPO The Pregnancy Centre regading donation management.
       This is a donation hub which allows the public to see what items the Centre needs in terms of donations and make requests to donate, while also allowing employees to manage donation requests & listings.
-      The tech stack used for this project was the MERN stack, with Firebase for user authentication and asset hosting (which were some of the features that I personally owned). 
+      The tech stack used for this project was the MERN stack, with Firebase for user authentication and asset hosting (which were some of the features that I personally owned).
       Ultimately, this hub will save busy staff countless hours and support many young mothers in need.`,
     },
     {
@@ -681,7 +683,7 @@ export const Home = () => {
       image: stock,
       buttonText: "Visit the web app",
       link: "https://stocksimple.netlify.app",
-      description: `This is a pair of web applications (SPA and API) I made to track my stock portfolio easily from my computer. 
+      description: `This is a pair of web applications (SPA and API) I made to track my stock portfolio easily from my computer.
       It's been coded in React and uses the Tradier Developer API to get real-time and historic market data.
       I've made it easy to use for anyone who wants to track their portfolio, utilizing localstorage for long-term data storage on-device or (if the user creates an account) MongoDB by way of a Node.js server.
       Deployments were done on Netlify and Heroku, with a database hosted on MongoDB Atlas. The apps have been containerized using Docker with a docker-compose for easy local development.`,
